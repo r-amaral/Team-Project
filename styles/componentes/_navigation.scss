@@ -1,0 +1,29 @@
+@import '../abstract/_variaveis.scss';
+
+
+.navigation {
+    margin-bottom: 37px;
+
+    .navigation__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .navigation__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            box-shadow: inset 0px -2px 0px $secondary-color;
+            color: $main-color;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.12rem;
+        }
+
+        .navigation__item--active {
+            box-shadow: inset 0px -3px 0px $tertiary-color;
+            color: $tertiary-color;
+        }
+    }
+}

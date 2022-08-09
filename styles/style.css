@@ -1,1 +1,58 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito:wght@300;400;500;600;700;800&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  background: #DDDDDD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main.container {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+  max-width: 617px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 617px) {
+  body main.container {
+    padding-left: 8.1%;
+    padding-right: 8.1%;
+    border-radius: 0;
+  }
+}
+header {
+  padding: 54px 0 18px 0;
+}
+header h1 {
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: #000000;
+}
+
+.navigation {
+  margin-bottom: 37px;
+}
+.navigation .navigation__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.navigation .navigation__content .navigation__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  box-shadow: inset 0px -2px 0px #AAAAAA;
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.12rem;
+}
+.navigation .navigation__content .navigation__item--active {
+  box-shadow: inset 0px -3px 0px #074EE8;
+  color: #074EE8;
+}/*# sourceMappingURL=style.css.map */

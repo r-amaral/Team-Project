@@ -16,14 +16,47 @@
             <h1>Team Sing Up</h1>
         </header>
 
-        <section class="navigation">
-            <nav class='navigation__content'>
+        <section class="display">
+            <nav class='navigation'>
                 <div class='navigation__item navigation__item--active'>Basic</div>
                 <div class='navigation__item'>Social</div>
                 <div class='navigation__item'>Certificates</div>
             </nav>
         </section>
+
+        <section class="display">
+            <form class="form__content">
+
+                <div class='form__certificates'>
+                    <div class='form__item' id='certificates'>
+                        <label for="certificates-input">Certificates</label>
+                        <input class='certificates__input' type="text" id='certificates-input'>
+                    </div>
+                    <button class='form__button form__button--more'><i></i>More<i></i></button>
+                </div>
+
+                <div class='form__item'>
+                    <label for="team-name">Team Name*</label>
+                    <input type="text" id='team-name'>
+                </div>
+
+                <div class='form__item'>
+                    <label for="institution">Institution*</label>
+                    <input type="text" id="institution">
+                </div>
+
+                <div class='form__item'>
+                    <label for="graduation">Graduation*</label>
+                    <input type="text" id="graduation">
+                </div>
+
+                <button class='form__button form__button--finish'>Finish</button>
+
+            </form>
+        </section>
     </main>
+
+    <script src="./scripts/certificates.js"></script>
 </body>
 
 </html>

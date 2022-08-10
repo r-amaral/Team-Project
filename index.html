@@ -4,11 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Team Sign Up</title>
 </head>
+
 <body>
-    <div class='div__content'>
-        <h2 class='h2__content h2__content--active'></h2>
-    </div>
+    <section>
+        <div class="section">
+            <form class="section__basic">
+                <label for="basic__full-name">full name*</label>
+                <input type="text" id="basic__full-name" class="input-padrao" required placeholder="foo bar">
+
+                <label for="basic__nickname">nickname</label>
+                <input type="text" id="basic__nickname" class="input-padrao" required placeholder="juanito">
+
+                <div class="basic__itens">
+                    <label for="basic__email">Email*</label>
+                    <input type="email" id="basic__email" class="input-padrao" required placeholder="foo@bar.com">
+
+                    <label for="basic__phone">phone</label>
+                    <input type="tel" id="basic__phone" class="input-padrao" required placeholder="(83) 00000-0000">
+                </div>
+            </form>
+
+            <p class="section__birthday">Birthday*</p>
+
+            <div class="section__date">
+                <label for="date__day">day</label>
+                <input type="number" id="date__day" class="input-padrao" required placeholder="01">
+
+
+                <label for="date__month">month</label>
+                <input type="number" id="date__month" class="input-padrao" required placeholder="01">
+
+                <label for="date__year">year</label>
+                <input type="number" id="date__year" class="input-padrao" required placeholder="1991">
+
+                <div class="date__period">
+                    <label for="date__age">age</label>
+                    <input type="number" id="date__period" class="input-padrao" required placeholder="18">
+                </div>
+            </div>
+
+            <div class="section__terms">
+                <label for="terms"><input type="checkbox" name="privacy" id="section__terms"> I accept the terms and privacy</label>
+            </div>
+
+            <div class="section__button">
+                <booton class="button__next">Next</booton>
+            </div>
+        </div>
+</section>
 </body>
 </html>

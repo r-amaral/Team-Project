@@ -1,1 +1,151 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito:wght@300;400;500;600;700;800&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+  background: #DDDDDD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main.container {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+  max-width: 617px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 617px) {
+  body main.container {
+    padding-left: 8.1%;
+    padding-right: 8.1%;
+    border-radius: 0;
+  }
+}
+header {
+  padding: 54px 0 18px 0;
+}
+header h1 {
+  font-family: "Inter";
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: #000000;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.navigation .navigation__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  box-shadow: inset 0px -2px 0px #AAAAAA;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.12rem;
+}
+.navigation .navigation__item--active {
+  box-shadow: inset 0px -3px 0px #074EE8;
+  color: #074EE8;
+}
+
+.display {
+  margin-bottom: 37px;
+}
+.display .form__content {
+  display: flex;
+  flex-direction: column;
+}
+.display .form__content .form__button--finish {
+  align-self: flex-end;
+  margin-top: 19px;
+}
+.display .form__content .form__certificates {
+  display: flex;
+  flex-direction: column;
+}
+.display .form__content .form__certificates .form__button--more {
+  margin: 10px 0;
+  width: 109px;
+  align-self: flex-end;
+}
+.display .form__content .form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 38px;
+}
+.display .form__content .form__item label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #767676;
+}
+.display .form__content .form__item input {
+  background: #FFFFFF;
+  border: 2px solid #AAAAAA;
+  border-radius: 4px;
+  height: 40px;
+}
+.display .form__contact {
+  display: flex;
+  justify-content: space-between;
+}
+.display .form__contact .form__email {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.display .form__contact .form__email #basic__email {
+  padding-left: 12px;
+}
+.display .form__contact .form__phone {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+.display .form__contact .form__phone #basic__phone {
+  padding-left: 12px;
+}
+.display .section__birthday {
+  padding-bottom: 14px;
+  color: #767676;
+}
+.display .section__date {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.display .section__date #date__day {
+  width: 95%;
+}
+.display .section__date #date__month {
+  width: 95%;
+}
+.display .section__date #date__year {
+  width: 95%;
+}
+.display .section__date #date__age {
+  width: 90%;
+}
+.display #section__terms {
+  height: auto;
+}
+.display .form__button {
+  color: #FFFFFF;
+  background-color: #074EE8;
+  float: right;
+  border-radius: 4px;
+  padding: 0px 12px;
+  height: 40px;
+  width: 81px;
+  font-weight: 400;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}/*# sourceMappingURL=style.css.map */

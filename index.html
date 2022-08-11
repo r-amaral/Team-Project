@@ -5,55 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="./styles/reset.css">     
+    <link rel="stylesheet" href="./styles/style.css">
+
     <title>Team Sign Up</title>
 </head>
 
 <body>
-    <section>
-        <div class="section">
-            <form class="section__basic">
-                <label for="basic__full-name">full name*</label>
-                <input type="text" id="basic__full-name" class="input-padrao" required placeholder="foo bar">
+    <main class="container">
+        <header>
+            <h1>Team Sing Up</h1>
+        </header>
 
-                <label for="basic__nickname">nickname</label>
-                <input type="text" id="basic__nickname" class="input-padrao" required placeholder="juanito">
+        <section class="display">
+            <nav class='navigation'>
+                <div class='navigation__item navigation__item--active'>Basic</div>
+                <div class='navigation__item'>Social</div>
+                <div class='navigation__item'>Certificates</div>
+            </nav>
+        </section>
 
-                <div class="basic__itens">
-                    <label for="basic__email">Email*</label>
-                    <input type="email" id="basic__email" class="input-padrao" required placeholder="foo@bar.com">
-
-                    <label for="basic__phone">phone</label>
-                    <input type="tel" id="basic__phone" class="input-padrao" required placeholder="(83) 00000-0000">
+    <section class="display">
+            <form class="form__content">
+                <div class="form__item" onsubmit="return validation(this);">
+                    <label for="full__name">Full name*</label>
+                    <input type="text" id="full__name"  placeholder="Foo bar">
                 </div>
+                
+                <div class="form__item">
+                    <label for="basic__nickname">Nickname</label>
+                    <input type="text" id="basic__nickname"  placeholder="Juanito">
+                </div>
+
+                <div class="form__item">
+                    <div class="form__contact">
+                        <div class="form__email">
+                            <label for="basic__email">Email*</label>
+                            <input type="email" id="basic__email"  placeholder="foo@bar.com">
+                        </div>
+
+                        <div class="form__phone">
+                            <label for="basic__phone">Phone</label>
+                            <input type="tel" id="basic__phone" placeholder="(83) 00000-0000">
+                        </div>
+                    </div>
+                </div>
+
+            
+
+                <p class="section__birthday">Birthday*</p>
+
+                <div class="section__date">
+                    <div class="form__item form__item--aniversario"> 
+                        <label for="date__day">Day</label>
+                        <input type="number" id="date__day"  placeholder="01">
+                    </div>
+                
+
+                    <div class="form__item form__item--aniversario">
+                        <label for="date__month">Month</label>
+                        <input type="number" id="date__month"  placeholder="01">
+                    </div>
+
+                    <div class="form__item form__item--aniversario">
+                        <label for="date__year">Year</label>
+                        <input type="number" id="date__year"  placeholder="1991">
+                    </div>
+
+                    <div class="form__item form__item--aniversario">
+                        <label for="date__age">Age</label>
+                        <input type="number" id="date__age" placeholder ="18">
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <label for="terms"><input type="checkbox" name="privacy" id="section__terms"> I accept the terms and privacy</label>
+                </div>
+
+                <div class="form__item">
+                    <div class="button__next">
+                        <button class="form__button" type="submit">Next</button>
+                    </div>
+
+                </div>
+
+                <script type="text/javascript" src="scripts/basic.js"></script>
+            
             </form>
 
-            <p class="section__birthday">Birthday*</p>
+        </section>
+    
+    </main>
 
-            <div class="section__date">
-                <label for="date__day">day</label>
-                <input type="number" id="date__day" class="input-padrao" required placeholder="01">
-
-
-                <label for="date__month">month</label>
-                <input type="number" id="date__month" class="input-padrao" required placeholder="01">
-
-                <label for="date__year">year</label>
-                <input type="number" id="date__year" class="input-padrao" required placeholder="1991">
-
-                <div class="date__period">
-                    <label for="date__age">age</label>
-                    <input type="number" id="date__period" class="input-padrao" required placeholder="18">
-                </div>
-            </div>
-
-            <div class="section__terms">
-                <label for="terms"><input type="checkbox" name="privacy" id="section__terms"> I accept the terms and privacy</label>
-            </div>
-
-            <div class="section__button">
-                <booton class="button__next">Next</booton>
-            </div>
-        </div>
-</section>
 </body>
+
 </html>

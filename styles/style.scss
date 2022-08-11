@@ -1,3 +1,6 @@
-@import 'abstract/base';
-@import 'componentes/input';
-@import 'componentes/quiz'
+
+@import './componentes/_main.scss';
+@import './componentes/_header.scss';
+@import './componentes/_navigation.scss';
+@import './componentes/_form.scss';
+

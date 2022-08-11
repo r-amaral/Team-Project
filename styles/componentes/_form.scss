@@ -1,0 +1,119 @@
+.display {
+    margin-bottom: 37px;
+
+    .form__content {
+        display: flex;
+        flex-direction: column;
+
+     
+
+        .form__button--finish {
+            align-self: flex-end;
+            margin-top: 19px;
+        }
+
+        .form__certificates {
+            display: flex;
+            flex-direction: column;
+
+            .form__button--more {
+                margin: 10px 0;
+                width: 109px;
+                align-self: flex-end;
+            }
+        }
+      
+        .form__item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 38px;
+
+            label {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: $label-color;
+            }
+
+            input {
+                background: #FFFFFF;
+                border: 2px solid #AAAAAA;
+                border-radius: 4px;
+                height: 40px;
+            }
+          
+
+        }
+
+        }
+        .form__contact{
+            display: flex;
+            justify-content: space-between;
+            
+            .form__email{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                #basic__email{
+                    padding-left: 12px;
+                }
+            }
+
+            .form__phone{
+                width: 35%;
+                display: flex;
+            flex-direction: column;
+                #basic__phone{
+                    padding-left: 12px;
+                }
+            }
+        }
+
+        .section__birthday{
+            padding-bottom: 14px;
+            color: $label-color;
+        }
+
+        .section__date {
+            display: flex;
+            justify-content: space-between ;
+            gap: 30px;
+            
+
+           #date__day{
+                width: 95%;
+            }
+
+            #date__month{
+                width: 95%;
+            }
+
+            #date__year{
+                width: 95%;
+            }
+
+            #date__age{
+                width: 90%;
+                
+            }
+        }
+
+        #section__terms{
+            height: auto;
+        }
+            
+        .form__button {
+            color: $fourth-color;
+            background-color: $tertiary-color;
+            float: right;
+            border-radius: 4px;
+            padding: 0px 12px;
+            height: 40px;
+            width: 81px;
+            font-weight: 400;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+}

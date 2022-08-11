@@ -22,6 +22,20 @@
             margin-top: 19px;
         }
 
+        .form__next {
+            align-self: flex-end;
+            display: flex;
+            align-items: center;
+            gap: 12.75px;
+            width: 82px;
+            .form__icon--next {
+                background: url('/image/Vector.svg');
+                background-repeat: no-repeat;
+                width: 10px;
+                height: 13px;
+            }
+        }
+
         .form__certificates {
             display: flex;
             flex-direction: column;
@@ -52,5 +66,34 @@
                 height: 40px;
             }
         }
+
+        .social__input--github {
+            margin-bottom: 312px; 
+        }
+
+        // final
+
+        .final__title {
+            font-weight: 600;
+            font-size: 1.12rem;
+        }
+
+        #line {
+            background-color: $tertiary-color;
+            width: 100%;
+            height: 1px;
+        }
+
+        .final__titles {
+            color: $tertiary-color;
+        }
+
+        .form__create {
+            width: 133px;
+            height: 37px;
+            font-size: 0.8rem;
+        }
+
+
     }
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
 
@@ -14,7 +14,7 @@
     <main class="container">
         <header>
             <h1>Team Sing Up</h1>
-        </header>
+        </header> 
 
         <section class="display">
             <nav class='navigation'>
@@ -25,6 +25,22 @@
         </section>
 
         <section class="display">
+            <form class="form__content">
+
+                    <div class='form__item' id='social'>
+                        <label for="social-input">LinkedIn</label>
+                        <input class='social__input--linkedln' id="get__linkedln" onblur="save()" type="link" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/">
+                    </div>
+
+                <div class='form__item'>
+                    <label for="team-name">Github *</label>
+                    <input class="social__input--github" id="social__input--github" onblur="save()" type="link" placeholder="https://github.com/foobar" id='social-github'>
+                </div>
+                <button class='form__button form__next' onclick="show()">Next <span class="form__icon--next"></span></button>
+            </form>
+        </section>
+
+        <!-- <section class="display">
             <form class="form__content">
 
                 <div class='form__certificates'>
@@ -53,10 +69,68 @@
                 <button class='form__button form__button--finish'>Finish</button>
 
             </form>
-        </section>
-    </main>
+        </section>  -->
 
-    <script src="./scripts/certificates.js"></script>
+        <section class="display">
+            <form class="form__content">
+
+                <div class="form__item final__title">
+                    <h1>Registration Information</h1>
+                </div>
+                <div id="line"></div>
+
+                <div class='form__item final__basic'>
+                    <h1 class="final__titles">Basic</h1>
+                    <div class="final--larger">
+                        <p>Full Name</p>
+                        <p id="p_name"></p>
+                        <p>Nickname</p>
+                        <p id="p_nickname"></p>
+                        <p>Email</p>
+                        <p id="p_email"></p>
+                    </div>
+                    <div class="final--smaller">
+                        <p>Phone</p>
+                        <p id="p_phone"></p>
+                        <p>Birthday</p>
+                        <p id="p_birthday"></p>
+                        <p>Age</p>
+                        <p id="p_age"></p>
+                    </div>
+                </div>
+
+                <div class='form__item final__social'>
+                    <h1 class="final__titles">Social</h1>
+                    <p>LinkedIn</p>
+                    <p id="p_linkedln"></p>
+                    <p>Github</p>
+                    <p id="p_github"></p>
+                </div>
+
+                <div class='form__item final__certificates'>
+                    <h1 class="final__titles">Certificates</h1>
+                    <p>Team Name</p>
+                    <p id="p_team"></p>
+                    <p>Institution</p>
+                    <p id="p_inst"></p>
+                    <p>Graduation</p>
+                    <p id="p_grad"></p>
+                    <p>Cerficates</p>
+                    <p id="p_cert"></p>
+                </div>
+
+            <button class='form__button form__create'>Novo formulário</button>
+        </form>
+
+
+
+        </section> 
+    </main> 
+
+    <!-- <script src="./scripts/certificates.js"></script>  -->
+    
+    <script src="./scripts/social.js"></script>
+    <script src="./scripts/dados.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
 
@@ -25,12 +25,15 @@
         </section>
 
         <section class="display">
-            <form class="form__content">
+            <form class="form__content form__content--certificates">
 
                 <div class='form__certificates'>
                     <div class='form__item' id='certificates'>
-                        <label for="certificates-input">Certificates</label>
-                        <input class='certificates__input' type="text" id='certificates-input'>
+                        <label class="label__favorite" for="certificates-input">Certificates</label>
+                        <div class='favorite__input'>
+                            <input class='certificates__input' type="text" placeholder="teste">
+                            <span class="favorite__icon" ></span>
+                        </div>
                     </div>
                     <button class='form__button form__button--more'><i></i>More<i></i></button>
                 </div>

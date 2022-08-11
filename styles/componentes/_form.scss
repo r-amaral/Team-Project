@@ -39,10 +39,12 @@
         .form__certificates {
             display: flex;
             flex-direction: column;
+
             .form__button--more {
                 margin: 10px 0;
                 width: 109px;
                 align-self: flex-end;
+                cursor:pointer;
             }
         }
 
@@ -59,11 +61,48 @@
                 color: $label-color;
             }
 
+            .label__favorite{
+                order: -1;
+            }
+
             input {
                 background: #FFFFFF;
                 border: 2px solid #AAAAAA;
                 border-radius: 4px;
                 height: 40px;
+                padding-left: 12px;
+            }
+
+            .favorite__input {
+                position: relative;
+                display: flex;
+                gap: 8px;
+                flex-direction: column;
+                order: 2;
+
+                .certificates__input {
+                    display: flex;
+                    padding-right: 40px;
+                }
+
+                span {
+                    background-image: url('../../image/heart.svg');
+                    background-repeat: no-repeat;
+                    width: 23px;
+                    height: 22px;
+                    position: absolute;
+                    top: 12px;
+                    right: 13px;
+                    cursor: pointer;
+                }
+            }
+
+            .favorite__input--active{
+                order: 1;
+
+                span{
+                    background: url('../../image/blueHeart.svg');
+                }
             }
         }
 

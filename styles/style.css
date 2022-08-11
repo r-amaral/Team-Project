@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito:wght@300;400;500;600;700;800&display=swap");
 body {
   font-family: "Nunito", sans-serif;
-  background: #DDDDDD;
+  background: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +97,7 @@ header h1 {
   margin: 10px 0;
   width: 109px;
   align-self: flex-end;
+  cursor: pointer;
 }
 .display .form__content .form__item {
   display: flex;
@@ -110,11 +111,15 @@ header h1 {
   line-height: 16px;
   color: #767676;
 }
+.display .form__content .form__item .label__favorite {
+  order: -1;
+}
 .display .form__content .form__item input {
   background: #FFFFFF;
   border: 2px solid #AAAAAA;
   border-radius: 4px;
   height: 40px;
+<<<<<<< HEAD
 }
 .display .form__content .social__input--github {
   margin-bottom: 312px;
@@ -135,4 +140,34 @@ header h1 {
   width: 133px;
   height: 37px;
   font-size: 0.8rem;
+=======
+  padding-left: 12px;
+}
+.display .form__content .form__item .favorite__input {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  order: 2;
+}
+.display .form__content .form__item .favorite__input .certificates__input {
+  display: flex;
+  padding-right: 40px;
+}
+.display .form__content .form__item .favorite__input span {
+  background-image: url("../../image/heart.svg");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 22px;
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  cursor: pointer;
+}
+.display .form__content .form__item .favorite__input--active {
+  order: 1;
+}
+.display .form__content .form__item .favorite__input--active span {
+  background: url("../../image/blueHeart.svg");
+>>>>>>> d400c85616a200f6bba3952b1bf4f08436798e42
 }/*# sourceMappingURL=style.css.map */

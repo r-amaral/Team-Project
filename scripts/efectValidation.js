@@ -1,11 +1,11 @@
 function efectBirthdayDay(status) {
     if (status == 'correct') {
-        spanBirtday[0].innerHTML = 'Campo Correto!'
+        spanBirtday[0].innerHTML = 'Valid data!!'
         correctEfect(spanBirtday[0])
         correctEfect(inputDay)
     }
     if (status == 'incorrect') {
-        spanBirtday[0].innerHTML = 'Data incorreto!'
+        spanBirtday[0].innerHTML = 'Invalid data!!'
         incorrectEfect(inputDay);
         incorrectEfect(spanBirtday[0]);
     }
@@ -13,12 +13,12 @@ function efectBirthdayDay(status) {
 
 function efectBirthdayMonth(status) {
     if (status == 'correct') {
-        spanBirtday[1].innerHTML = 'Campo Correto!'
+        spanBirtday[1].innerHTML = 'Valid data!!'
         correctEfect(spanBirtday[1])
         correctEfect(inputMonth)
     }
     if (status == 'incorrect') {
-        spanBirtday[1].innerHTML = 'Valor incorreto!'
+        spanBirtday[1].innerHTML = 'Invalid data!!'
         incorrectEfect(inputMonth);
         incorrectEfect(spanBirtday[1]);
     }
@@ -26,12 +26,12 @@ function efectBirthdayMonth(status) {
 
 function efectBirthdayYear(status) {
     if (status == 'correct') {
-        spanBirtday[2].innerHTML = 'Campo Correto!'
+        spanBirtday[2].innerHTML = 'Valid data!!'
         correctEfect(spanBirtday[2])
         correctEfect(inputYear)
     }
     if (status == 'incorrect') {
-        spanBirtday[2].innerHTML = 'Valor incorreto!'
+        spanBirtday[2].innerHTML = 'Invalid data!!'
         incorrectEfect(inputYear);
         incorrectEfect(spanBirtday[2]);
     }

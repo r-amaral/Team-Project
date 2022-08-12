@@ -58,6 +58,23 @@ header h1 {
 .display {
   margin-bottom: 37px;
 }
+.display .button_side .form__create {
+  border-radius: 4px;
+  padding: 0px 12px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 1rem;
+  border: 2px solid #074EE8;
+  outline: none;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+  background-color: #074EE8;
+  cursor: pointer;
+  transition: 0.5s;
+}
 .display .form__content {
   display: flex;
   flex-direction: column;
@@ -73,6 +90,19 @@ header h1 {
   border: 2px solid #074EE8;
   outline: none;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.display .form__content .form__button .form__icon__right {
+  background: url(../../image/certoAzul.svg) no-repeat;
+  width: 15px;
+  height: 14px;
+}
+.display .form__content .form__button .form__icon--next {
+  background: url(../../image/VectorAzul.svg) no-repeat;
+  width: 16px;
+  height: 12px;
 }
 .display .form__content .form__button--active {
   color: #FFFFFF;
@@ -80,6 +110,16 @@ header h1 {
   border: none;
   cursor: pointer;
   transition: 0.5s;
+}
+.display .form__content .form__button--active .form__icon__right {
+  background: url(../../image/Leading-Icon.svg) no-repeat;
+  width: 15px;
+  height: 15px;
+}
+.display .form__content .form__button--active .form__icon--next {
+  background: url(../../image/Vector.svg) no-repeat;
+  width: 15px;
+  height: 12px;
 }
 .display .form__content .form__button--finish {
   align-self: flex-end;
@@ -89,14 +129,7 @@ header h1 {
   align-self: flex-end;
   display: flex;
   align-items: center;
-  gap: 12.75px;
   width: 82px;
-}
-.display .form__content .form__next .form__icon--next {
-  background: url("/image/Vector.svg");
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 13px;
 }
 .display .form__content .form__certificates {
   display: flex;
@@ -130,6 +163,10 @@ header h1 {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 34px;
+}
+.display .form__content .form__item .label__checkbox {
+  display: flex;
+  align-items: center;
 }
 .display .form__content .form__item .form__email {
   width: 60%;
@@ -368,5 +405,32 @@ header h1 {
   .p_general--mod {
     margin-top: 7px;
     margin-bottom: 7px;
+  }
+}
+@media (max-width: 410px) {
+  .display .form__content .form__item {
+    width: 100%;
+  }
+  .display .form__content .form__item .form__contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .display .form__content .form__item .form__contact .form__email {
+    width: 100%;
+    margin-bottom: 34px;
+  }
+  .display .form__content .form__item .form__contact .form__phone {
+    width: 100%;
+  }
+  .display .form__content .section__date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .display .form__content .section__date .form__input--basic {
+    box-sizing: border-box;
+  }
+  .display .form__content .section__date .from___dayMonth {
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -118,6 +118,8 @@ function thirdPage() {
 }
 
 function fourthPage() {
+
+    alert("Data registered successfully")
     navigationHeader.classList.add('off');
 
     navigationItem.forEach((item, index) => {

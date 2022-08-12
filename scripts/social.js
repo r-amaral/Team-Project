@@ -12,11 +12,11 @@ function formGitHub() {
     if (regexGithub.test(inputGithub.value)) {
         correctEfect(inputGithub)
         correctEfect(spanGithub)
-        spanGithub.innerHTML = 'Campo Correto!'
+        spanGithub.innerHTML = 'Valid data!!'
     } else {
         incorrectEfect(inputGithub)
         incorrectEfect(spanGithub)
-        spanGithub.innerHTML = 'Campo Incorreto!'
+        spanGithub.innerHTML = 'Invalid data!!'
     }
 }
 
@@ -29,12 +29,12 @@ function formLinkedin() {
     } else if (regexLinkedin.test(inputLinkedin.value)) {
         correctEfect(inputLinkedin)
         correctEfect(spanLinkedin)
-        spanLinkedin.innerHTML = 'Campo Correto!'
+        spanLinkedin.innerHTML = 'Valid data!!'
     }
     else {
         incorrectEfect(inputLinkedin)
         incorrectEfect(spanLinkedin)
-        spanLinkedin.innerHTML = 'Campo Incorreto!'
+        spanLinkedin.innerHTML = 'Invalid data!!'
     }
 }
 

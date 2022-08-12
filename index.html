@@ -12,11 +12,11 @@
 
 <body>
     <main class="container">
-        <header>
-            <h1>Team Sing Up</h1>
-        </header>
 
         <section class="display display--header">
+            <header>
+                <h1>Team Sing Up</h1>
+            </header>
             <nav>
                 <ul class='navigation'>
                     <li class='navigation__item navigation__item--active'>Basic</li>
@@ -26,19 +26,21 @@
             </nav>
         </section>
 
-        <section class="display display--main ">
+        <section class="display display--main">
             <form class="form__content" id='form-basic'>
                 <div class="form__item">
                     <label for="full__name">Full name*</label>
                     <input class='form__input--basic' type="text" id="full__name" placeholder="Foo bar"
-                        onchange="validationNome(), fisrtPageBlock()" onblur="validationNickName(), validationPhone()">
+                        onchange="validationNome(), fisrtPageBlock()"
+                        onblur="validationNickName(), validationPhone(), save()">
                     <span class='form__efect'></span>
                 </div>
 
                 <div class="form__item">
                     <label for="basic__nickname">Nickname</label>
                     <input class='form__input--basic form__states--correct form__states--default' type="text"
-                        id="basic__nickname" placeholder="Juanito" onchange="fisrtPageBlock(), validationNickName()">
+                        id="basic__nickname" placeholder="Juanito" onchange="fisrtPageBlock(), validationNickName()"
+                        onblur='save()'>
                     <span class='form__efect'></span>
                 </div>
 
@@ -47,14 +49,15 @@
                         <div class="form__email">
                             <label for="basic__email">Email*</label>
                             <input class='form__input--basic' type="email" id="basic__email" placeholder="foo@bar.com"
-                                onchange="validationEmail(), fisrtPageBlock()">
+                                onchange="validationEmail(), fisrtPageBlock()" onblur="save()">
                             <span class='form__efect'></span>
                         </div>
 
                         <div class="form__phone">
                             <label for="basic__phone">Phone</label>
                             <input class='form__input--basic form__states--correct form__states--default' type="tel"
-                                id="basic__phone" placeholder="(83) 00000-0000" onchange="validationPhone()">
+                                id="basic__phone" placeholder="(83) 00000-0000" onchange="validationPhone()"
+                                onblur="save()">
                             <span class='form__efect'></span>
                         </div>
                     </div>
@@ -91,13 +94,13 @@
                 </div>
 
                 <div class="form__item">
-                    <label for="terms"><input type="checkbox" id="input__terms" onchange="fisrtPageBlock()"> I
+                    <label for="terms" class="label__checkbox"><input type="checkbox" id="input__terms"
+                            onchange="fisrtPageBlock()">
+                        I
                         accept the terms and
                         privacy</label>
                 </div>
-
-                <button class='form__button form__next'>Next <span class="form__icon--next"></span></button>
-
+                <button class='form__button form__next'>Next<span class="form__icon--next"></span></button>
             </form>
         </section>
 
@@ -107,7 +110,7 @@
                 <div class='form__item' id='social'>
                     <label for="social-input">LinkedIn</label>
                     <input class='social__input--linkedln form__states--correct form__states--default'
-                        id="get__linkedln" onblur="formLinkedin(),secondyPageBlock()" type="url"
+                        id="get__linkedln" onblur="formLinkedin(),secondyPageBlock(),save()" type="url"
                         placeholder="https://www.linkedin.com/">
                     <span class='form__efect--linkedin'></span>
                 </div>
@@ -124,46 +127,46 @@
             </form>
         </section>
 
-        <section class="display display--main ">
+        <section class="display display--main off">
             <form class="form__content form__content--certificates">
 
                 <div class='form__certificates'>
                     <div class='form__item' id='certificates'>
                         <label class="label__favorite" for="certificates-input">Certificates</label>
                         <div class='favorite__input'>
-                            <input class='certificates__input' type="text" placeholder="https://www.linkedin.com/in/">
+                            <input class='certificates__input' type="text" placeholder="https://www.linkedin.com/in/"
+                                onblur='save()'>
                             <span class="favorite__icon"></span>
                         </div>
                     </div>
-                    <button class='form__button form__button--more'><span
-                            class='form__icon__more form__icon__more__blue'></span>More<span
+                    <button class='form__button form__button--more'><span class='form__icon__more'></span>More<span
                             class='form__icon__vectro'></span></button>
                 </div>
 
                 <div class='form__item'>
                     <label for="team-name">Team Name*</label>
                     <input type="text" id='team-name' placeholder="Team Front-End"
-                        onchange="validationTeamName(), thirdPageBlock()">
+                        onchange="validationTeamName(), thirdPageBlock()" onblur="save()">
                     <span class="form__efect--certificates"></span>
                 </div>
 
                 <div class='form__item'>
                     <label for="institution">Institution*</label>
                     <input type="text" id="institution" placeholder="Universidade federal da Paraíba"
-                        onchange="validationInstituition(), thirdPageBlock()">
+                        onchange="validationInstituition(), thirdPageBlock()" onblur="save()">
                     <span class=" form__efect--certificates"></span>
                 </div>
 
                 <div class='form__item'>
                     <label for="graduation">Graduation*</label>
                     <input type="text" id="graduation" placeholder="Ciência da Computação"
-                        onchange="validationGraduation(), thirdPageBlock()">
+                        onchange="validationGraduation(), thirdPageBlock()" onblur="save()">
                     <span class=" form__efect--certificates"></span>
                 </div>
 
-                <button class='form__button form__button--finish'><span
-                        class="form__icon__right form__icon__right--blue"></span> Finish</button>
-
+                <button onclick="show()" class='form__button form__button--finish'><span
+                        class="form__icon__right"></span>
+                    Finish</button>
             </form>
         </section>
 

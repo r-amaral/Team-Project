@@ -1,6 +1,27 @@
 .display {
     margin-bottom: 37px;
 
+    .button_side {
+
+        .form__create {
+            border-radius: 4px;
+            padding: 0px 12px;
+            height: 40px;
+            font-weight: 400;
+            font-size: 1rem;
+            border: 2px solid $tertiary-color;
+            outline: none;
+            transition: .5s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: $fourth-color ;
+            background-color: $tertiary-color;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+
     .form__content {
         display: flex;
         flex-direction: column;
@@ -16,6 +37,21 @@
             border: 2px solid $tertiary-color;
             outline: none;
             transition: .5s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .form__icon__right {
+                background: url(../../image/certoAzul.svg) no-repeat;
+                width: 15px;
+                height: 14px;
+            }
+
+            .form__icon--next {
+                background: url(../../image/VectorAzul.svg) no-repeat;
+                width: 16px;
+                height: 12px;
+            }
         }
 
         .form__button--active {
@@ -24,6 +60,18 @@
             border: none;
             cursor: pointer;
             transition: .5s;
+
+            .form__icon__right {
+                background: url(../../image/Leading-Icon.svg) no-repeat;
+                width: 15px;
+                height: 15px;
+            }
+
+            .form__icon--next {
+                background: url(../../image/Vector.svg) no-repeat;
+                width: 15px;
+                height: 12px;
+            }
         }
 
         .form__button--finish {
@@ -31,20 +79,11 @@
             margin-top: 19px;
         }
 
-
         .form__next {
             align-self: flex-end;
             display: flex;
             align-items: center;
-            gap: 12.75px;
             width: 82px;
-
-            .form__icon--next {
-                background: url('/image/Vector.svg');
-                background-repeat: no-repeat;
-                width: 10px;
-                height: 13px;
-            }
         }
 
         .form__certificates {
@@ -83,6 +122,11 @@
             flex-direction: column;
             gap: 8px;
             margin-bottom: 34px;
+
+            .label__checkbox {
+                display: flex;
+                align-items: center;
+            }
 
             .form__email {
 
@@ -180,8 +224,6 @@
                 }
             }
         }
-
-
     }
 }
 
@@ -221,19 +263,6 @@
     height: auto;
 }
 
-// .form__button {
-//     color: $fourth-color;
-//     background-color: $tertiary-color;
-//     float: right;
-//     border-radius: 4px;
-//     padding: 0px 12px;
-//     height: 40px;
-//     width: 81px;
-//     font-weight: 400;
-//     font-size: 1rem;
-//     border: none;
-//     outline: none;
-// }
 
 .off {
     display: none;
@@ -371,5 +400,43 @@
     .p_general--mod {
         margin-top: 7px;
         margin-bottom: 7px;
+    }
+}
+
+@media (max-width: 410px) {
+    .display {
+        .form__content {
+            .form__item {
+                width: 100%;
+
+                .form__contact {
+                    display: flex;
+                    flex-direction: column;
+
+                    .form__email {
+                        width: 100%;
+                        margin-bottom: 34px;
+                    }
+
+                    .form__phone {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .section__date {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+
+                .form__input--basic {
+                    box-sizing: border-box;
+                }
+
+                .from___dayMonth {
+                    display: flex;
+                }
+            }
+        }
     }
 }

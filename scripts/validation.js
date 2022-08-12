@@ -8,9 +8,9 @@ function validationNome() {
     let mascaraNome = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/
 
     if (mascaraNome.test(inputForm[0].value)) {
-        efectForm('Full Name', 'correct', 'Campo correto!');
+        efectForm('Full Name', 'correct', 'Valid data!!');
     } else {
-        efectForm('Full Name', 'incorrect', 'Nome invalido');
+        efectForm('Full Name', 'incorrect', 'Invalid data!!');
     }
 }
 
@@ -23,7 +23,7 @@ function validationNickName() {
     } else {
         correctEfect(inputForm[1])
         correctEfect(spanEfect[1])
-        spanEfect[1].innerHTML = 'Campo Correto!'
+        spanEfect[1].innerHTML = 'Valid data!!'
     }
 }
 
@@ -31,9 +31,9 @@ function validationEmail() {
     let mascaraEmail = /\S+@\S+\.\S+/;
 
     if (mascaraEmail.test(inputForm[2].value)) {
-        efectForm('Email', 'correct', 'Campo correto!');
+        efectForm('Email', 'correct', 'Valid data!!');
     } else {
-        efectForm('Email', 'incorrect', 'Email incorreto');
+        efectForm('Email', 'incorrect', 'Invalid data!!');
     }
 }
 
@@ -45,7 +45,7 @@ function validationPhone() {
     } else {
         correctEfect(inputForm[3])
         correctEfect(spanEfect[3])
-        spanEfect[3].innerHTML = 'Campo Correto!'
+        spanEfect[3].innerHTML = 'Valid data!!'
     }
 }
 

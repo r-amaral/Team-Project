@@ -196,107 +196,6 @@ header h1 {
 .display .form__content .form__item .favorite__input--active span {
   background: url("../../image/blueHeart.svg");
 }
-.display .form__content .social__input--github {
-  margin-bottom: 312px;
-}
-.display .form__content .final__title {
-  font-weight: 600;
-  font-size: 1.12rem;
-}
-.display .form__content #line {
-  background-color: #074EE8;
-  width: 100%;
-  height: 1px;
-}
-.display .form__content .final__titles {
-  color: #074EE8;
-}
-.display .form__content .form__create {
-  width: 133px;
-  height: 37px;
-  font-size: 0.8rem;
-}
-.display .form__content .form__item--side {
-  display: flex;
-}
-.display .form__content .social__input--github {
-  margin-bottom: 312px;
-}
-.display .form__content .final__title {
-  font-weight: 600;
-  font-size: 1.12rem;
-  align-self: center;
-  margin-top: 36px;
-}
-.display .form__content #line {
-  background-color: #074EE8;
-  width: 100%;
-  height: 1px;
-  margin: 14px 0 25px 0;
-}
-.display .form__content .final__titles {
-  color: #074EE8;
-}
-.display .form__content .background__gray {
-  background-color: #F5F2F2;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 15px 17px;
-}
-.display .form__content .form__create {
-  width: 133px;
-  height: 37px;
-  font-size: 0.8rem;
-}
-.display .form__content .final__social {
-  box-sizing: border-box;
-}
-.display .form__content .p_general {
-  margin-top: 10px;
-  width: 29%;
-  color: #767676;
-  font-weight: 700;
-}
-.display .form__content .p_general--min {
-  margin-bottom: 10px;
-}
-.display .form__content .p_base {
-  color: #767676;
-  display: block;
-  word-wrap: break-word;
-}
-.display .form__content .engloba {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-}
-.display .form__content .side {
-  display: flex;
-  align-items: flex-end;
-}
-.display .form__content .button_side {
-  display: flex;
-  justify-content: flex-end;
-}
-@media (max-width: 438px) {
-  .display .form__content .engloba {
-    display: flex;
-    flex-direction: column;
-  }
-  .display .form__content .side {
-    display: initial;
-  }
-  .display .form__content .p_general {
-    width: 70%;
-  }
-  .display .form__content .p_general--min {
-    margin-top: 15px;
-    margin-bottom: 7px;
-  }
-  .display .form__content .p_general--mod {
-    margin-top: 7px;
-    margin-bottom: 7px;
-  }
-}
 
 .form__contact {
   display: flex;
@@ -346,4 +245,129 @@ header h1 {
 
 .off {
   display: none;
+}
+
+.social__input--github {
+  margin-bottom: 312px;
+}
+
+.final__title {
+  font-weight: 600;
+  font-size: 1.12rem;
+}
+
+#line {
+  background-color: #074EE8;
+  width: 100%;
+  height: 1px;
+}
+
+.final__titles {
+  color: #074EE8;
+}
+
+.form__create {
+  width: 133px;
+  height: 37px;
+  font-size: 0.8rem;
+}
+
+.form__item--side {
+  display: flex;
+}
+
+.social__input--github {
+  margin-bottom: 312px;
+}
+
+.final__title {
+  font-weight: 600;
+  font-size: 1.12rem;
+  align-self: center;
+  margin-top: 36px;
+}
+.final__title h1 {
+  text-align: center;
+}
+
+#line {
+  background-color: #074EE8;
+  width: 100%;
+  height: 1px;
+  margin: 14px 0 25px 0;
+}
+
+.final__titles {
+  color: #074EE8;
+}
+
+.background__gray {
+  background-color: #F5F2F2;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 15px 17px;
+  margin-bottom: 15px;
+}
+
+.form__create {
+  width: 133px;
+  height: 37px;
+  font-size: 0.8rem;
+}
+
+.final__social {
+  box-sizing: border-box;
+}
+
+.p_general {
+  margin-top: 10px;
+  width: 29%;
+  color: #767676;
+  font-weight: 700;
+}
+
+.p_general--min {
+  margin-bottom: 10px;
+}
+
+.p_base {
+  color: #767676;
+  display: block;
+  word-wrap: break-word;
+}
+
+.engloba {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.side {
+  display: flex;
+  align-items: flex-end;
+}
+
+.button_side {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 438px) {
+  .engloba {
+    display: flex;
+    flex-direction: column;
+  }
+  .side {
+    display: initial;
+  }
+  .p_general {
+    width: 70%;
+  }
+  .p_general--min {
+    margin-top: 15px;
+    margin-bottom: 7px;
+  }
+  .p_general--mod {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
 }/*# sourceMappingURL=style.css.map */

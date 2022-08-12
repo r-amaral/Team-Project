@@ -60,7 +60,7 @@ function moreCertificates(event) {
         document.querySelector('#certificates').appendChild(divElement);
 
         const inputElement = document.createElement('input');
-        inputElement.placeholder = 'favo';
+        inputElement.placeholder = 'https://www.linkedin.com/in/';
         inputElement.classList.add('certificates__input');
 
         const spanElement = document.createElement('span');

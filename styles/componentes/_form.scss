@@ -60,6 +60,21 @@
                 background-color: $tertiary-color;
                 border: none;
                 cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .form__icon__more {
+                    background: url(../../image/Leading-IconP.svg) no-repeat;
+                    width: 15px;
+                    height: 17px;
+                }
+
+                .form__icon__vectro {
+                    background: url(../../image/Vector.svg) no-repeat;
+                    width: 15px;
+                    height: 12px;
+                }
             }
         }
 
@@ -206,19 +221,19 @@
     height: auto;
 }
 
-.form__button {
-    color: $fourth-color;
-    background-color: $tertiary-color;
-    float: right;
-    border-radius: 4px;
-    padding: 0px 12px;
-    height: 40px;
-    width: 81px;
-    font-weight: 400;
-    font-size: 1rem;
-    border: none;
-    outline: none;
-}
+// .form__button {
+//     color: $fourth-color;
+//     background-color: $tertiary-color;
+//     float: right;
+//     border-radius: 4px;
+//     padding: 0px 12px;
+//     height: 40px;
+//     width: 81px;
+//     font-weight: 400;
+//     font-size: 1rem;
+//     border: none;
+//     outline: none;
+// }
 
 .off {
     display: none;

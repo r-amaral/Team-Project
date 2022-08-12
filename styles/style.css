@@ -111,6 +111,19 @@ header h1 {
   background-color: #074EE8;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.display .form__content .form__certificates .form__button--more .form__icon__more {
+  background: url(../../image/Leading-IconP.svg) no-repeat;
+  width: 15px;
+  height: 17px;
+}
+.display .form__content .form__certificates .form__button--more .form__icon__vectro {
+  background: url(../../image/Vector.svg) no-repeat;
+  width: 15px;
+  height: 12px;
 }
 .display .form__content .form__item {
   display: flex;
@@ -227,20 +240,6 @@ header h1 {
 
 #input__terms {
   height: auto;
-}
-
-.form__button {
-  color: #FFFFFF;
-  background-color: #074EE8;
-  float: right;
-  border-radius: 4px;
-  padding: 0px 12px;
-  height: 40px;
-  width: 81px;
-  font-weight: 400;
-  font-size: 1rem;
-  border: none;
-  outline: none;
 }
 
 .off {

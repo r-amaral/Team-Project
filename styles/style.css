@@ -48,10 +48,15 @@ header h1 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.12rem;
+  cursor: pointer;
 }
 .navigation .navigation__item--active {
   box-shadow: inset 0px -3px 0px #074EE8;
   color: #074EE8;
+}
+
+.off {
+  display: none;
 }
 
 .display {
@@ -76,6 +81,19 @@ header h1 {
   align-self: flex-end;
   margin-top: 19px;
 }
+.display .form__content .form__next {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 12.75px;
+  width: 82px;
+}
+.display .form__content .form__next .form__icon--next {
+  background: url("/Team-Project/image/Vector.svg");
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 13px;
+}
 .display .form__content .form__certificates {
   display: flex;
   flex-direction: column;
@@ -84,7 +102,6 @@ header h1 {
   margin: 10px 0;
   width: 109px;
   align-self: flex-end;
-  cursor: pointer;
 }
 .display .form__content .form__item {
   display: flex;
@@ -98,40 +115,90 @@ header h1 {
   line-height: 16px;
   color: #767676;
 }
-.display .form__content .form__item .label__favorite {
-  order: -1;
-}
 .display .form__content .form__item input {
   background: #FFFFFF;
   border: 2px solid #AAAAAA;
   border-radius: 4px;
   height: 40px;
-  padding-left: 12px;
 }
-.display .form__content .form__item .favorite__input {
-  position: relative;
+.display .form__content .form__item--side {
   display: flex;
-  gap: 8px;
-  flex-direction: column;
-  order: 2;
 }
-.display .form__content .form__item .favorite__input .certificates__input {
+.display .form__content .social__input--github {
+  margin-bottom: 312px;
+}
+.display .form__content .final__title {
+  font-weight: 600;
+  font-size: 1.12rem;
+  align-self: center;
+  margin-top: 36px;
+}
+.display .form__content #line {
+  background-color: #074EE8;
+  width: 100%;
+  height: 1px;
+  margin: 14px 0 25px 0;
+}
+.display .form__content .final__titles {
+  color: #074EE8;
+}
+.display .form__content .background__gray {
+  background-color: #F5F2F2;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 15px 17px;
+}
+.display .form__content .form__create {
+  width: 133px;
+  height: 37px;
+  font-size: 0.8rem;
+}
+.display .form__content .final__social {
+  box-sizing: border-box;
+}
+.display .form__content .p_general {
+  margin-top: 10px;
+  width: 29%;
+  color: #767676;
+  font-weight: 700;
+}
+.display .form__content .p_general--min {
+  margin-bottom: 10px;
+}
+.display .form__content .p_base {
+  color: #767676;
+  display: block;
+  word-wrap: break-word;
+}
+.display .form__content .engloba {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.display .form__content .side {
   display: flex;
-  padding-right: 40px;
+  align-items: flex-end;
 }
-.display .form__content .form__item .favorite__input span {
-  background-image: url("../../image/heart.svg");
-  background-repeat: no-repeat;
-  width: 23px;
-  height: 22px;
-  position: absolute;
-  top: 12px;
-  right: 13px;
-  cursor: pointer;
+.display .form__content .button_side {
+  display: flex;
+  justify-content: flex-end;
 }
-.display .form__content .form__item .favorite__input--active {
-  order: 1;
-}
-.display .form__content .form__item .favorite__input--active span {
-  background: url("../../image/blueHeart.svg");
+@media (max-width: 438px) {
+  .display .form__content .engloba {
+    display: flex;
+    flex-direction: column;
+  }
+  .display .form__content .side {
+    display: initial;
+  }
+  .display .form__content .p_general {
+    width: 70%;
+  }
+  .display .form__content .p_general--min {
+    margin-top: 15px;
+    margin-bottom: 7px;
+  }
+  .display .form__content .p_general--mod {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
 }/*# sourceMappingURL=style.css.map */

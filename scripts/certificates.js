@@ -2,7 +2,6 @@ const botaoMore = document.querySelector('.form__button--more');
 const formItem = document.querySelector('#certificates');
 
 let arrayFavorito = [];
-let arrayAntigo = [];
 
 botaoMore.addEventListener('click', moreCertificates);
 formItem.addEventListener('click', FavoriteCertificates);
@@ -16,31 +15,36 @@ function FavoriteCertificates(event) {
         if (event.target == heartElement[i]) {
 
             const divFavorite = event.target.parentNode;
+            const inputFavorite = event.target.previousElementSibling;
+
+            if (divFavorite.classList.contains('favorite__input--active')) {
+                renderRemoveFavorite(divFavorite);
+            } else renderAddFavorite(divFavorite);
 
             if (arrayFavorito.indexOf(divFavorite) == -1) {
                 arrayFavorito.push(divFavorite);
-                divFavorite.remove();  
+                divFavorite.remove();
             }
-            renderDiv();
+            renderElement(inputFavorite.value);
         }
     }
 }
 
-function renderDiv() {
+function renderElement(value) {
 
     let lastItem = [...arrayFavorito].pop();
 
-    formItem.innerHTML += `
-        <div class='favorite__input favorite__input--active'>
-            ${lastItem.innerHTML}
-        </div>
-    `
+    lastItem.firstChild.value = value;
+
+    formItem.appendChild(lastItem);
 }
 
 function renderRemoveFavorite(div) {
-    const favoriteDiv = document.querySelectorAll('.favorite__input');
+    div.classList.toggle('favorite__input--active');
+}
 
-    div.classList.remove('favorite__input--active');
+function renderAddFavorite(div) {
+    div.classList.add('favorite__input--active');
 }
 
 function moreCertificates(event) {

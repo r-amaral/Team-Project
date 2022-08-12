@@ -42,17 +42,13 @@ function calculateAge(day, month, year) {
     const inputAge = document.querySelector('#date__age');
 
     const dateA = new Date();
-    const monthA = date.getMonth + 1;
-    const yearA = date.getFullYear();
-    const dayA = date.getDate();
+    const monthA = dateA.getMonth() + 1;
+    const yearA = dateA.getFullYear();
+    const dayA = dateA.getDate();
 
-    const birthday = new Date(year, month, day);
+    let age = yearA - year;
 
-    let age = yearA - birthday.getFullYear(birthday)
-
-    const monthE = today.getMonth() - birthday.getMonth(birthday)
-
-    if (monthE < monthE == 0 && today.getDate() < birthday.getDate()) {
+    if (monthA < month || monthA == month && dayA < day) {
         age = age - 1;
     }
 

@@ -119,28 +119,6 @@ header h1 {
   border: 2px solid #AAAAAA;
   border-radius: 4px;
   height: 40px;
-<<<<<<< HEAD
-}
-.display .form__content .social__input--github {
-  margin-bottom: 312px;
-}
-.display .form__content .final__title {
-  font-weight: 600;
-  font-size: 1.12rem;
-}
-.display .form__content #line {
-  background-color: #074EE8;
-  width: 100%;
-  height: 1px;
-}
-.display .form__content .final__titles {
-  color: #074EE8;
-}
-.display .form__content .form__create {
-  width: 133px;
-  height: 37px;
-  font-size: 0.8rem;
-=======
   padding-left: 12px;
 }
 .display .form__content .form__item .favorite__input {
@@ -169,5 +147,24 @@ header h1 {
 }
 .display .form__content .form__item .favorite__input--active span {
   background: url("../../image/blueHeart.svg");
->>>>>>> d400c85616a200f6bba3952b1bf4f08436798e42
+}
+.display .form__content .social__input--github {
+  margin-bottom: 312px;
+}
+.display .form__content .final__title {
+  font-weight: 600;
+  font-size: 1.12rem;
+}
+.display .form__content #line {
+  background-color: #074EE8;
+  width: 100%;
+  height: 1px;
+}
+.display .form__content .final__titles {
+  color: #074EE8;
+}
+.display .form__content .form__create {
+  width: 133px;
+  height: 37px;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */

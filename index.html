@@ -18,7 +18,7 @@
 
         <section class="display display--header">
             <nav>
-                <ul class='navigation off'>
+                <ul class='navigation'>
                     <li class='navigation__item navigation__item--active'>Basic</li>
                     <li class='navigation__item'>Social</li>
                     <li class='navigation__item'>Certificates</li>
@@ -101,7 +101,7 @@
             </form>
         </section>
 
-        <section class="display display--main">
+        <section class="display display--main off">
             <form class="form__content form__content--certificates">
 
                 <div class='form__item' id='social'>
@@ -124,7 +124,7 @@
             </form>
         </section>
 
-        <section class="display display--main ">
+        <section class="display display--main off">
             <form class="form__content form__content--certificates">
 
                 <div class='form__certificates'>
@@ -164,78 +164,77 @@
             </form>
         </section>
 
-        <section class="display">
-            <form class="form__content">
+        <section class="display display--main content">
 
-                <div class="final__title">
-                    <h1>Registration Information</h1>
-                </div>
-                <div id="line"></div>
+            <div class="final__title">
+                <h1>Registration Information</h1>
+            </div>
+            <div id="line"></div>
 
-                <div class='form__item final__basic background__gray'>
-                    <h1 class="final__titles">Basic</h1>
-                    <div class="engloba">
-                        <div class="final--larger">
-                            <div>
-                                <p class="p_general p_general--min">Full Name</p>
-                                <p class="p_base" id="p_name"></p>
-                            </div>
-                            <div>
-                                <p class="p_general p_general--min">Nickname</p>
-                                <p class="p_base" id="p_nickname"></p>
-                            </div>
-                            <div>
-                                <p class="p_general p_general--min">Email</p>
-                                <p class="p_base" id="p_email"></p>
-                            </div>
+            <div class='form__item final__basic background__gray'>
+                <h1 class="final__titles">Basic</h1>
+                <div class="engloba">
+                    <div class="final--larger">
+                        <div>
+                            <p class="p_general p_general--min">Full Name</p>
+                            <p class="p_base" id="p_name"></p>
                         </div>
                         <div>
-                            <div>
-                                <p class="p_general p_general--min">Phone</p>
-                                <p class="p_base" id="p_phone"></p>
-                            </div>
-                            <div>
-                                <p class="p_general p_general--min">Birthday</p>
-                                <p class="p_base" id="p_birthday"></p>
-                            </div>
-                            <div>
-                                <p class="p_general p_general--min">Age</p>
-                                <p class="p_base" id="p_age"></p>
-                            </div>
+                            <p class="p_general p_general--min">Nickname</p>
+                            <p class="p_base" id="p_nickname"></p>
+                        </div>
+                        <div>
+                            <p class="p_general p_general--min">Email</p>
+                            <p class="p_base" id="p_email"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="p_general p_general--min">Phone</p>
+                            <p class="p_base" id="p_phone"></p>
+                        </div>
+                        <div>
+                            <p class="p_general p_general--min">Birthday</p>
+                            <p class="p_base" id="p_birthday"></p>
+                        </div>
+                        <div>
+                            <p class="p_general p_general--min">Age</p>
+                            <p class="p_base" id="p_age"></p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class='form__item final__social background__gray'>
-                    <h1 class="final__titles">Social</h1>
-                    <p class="p_general ">LinkedIn</p>
-                    <p class="p_base" id="p_linkedln"></p>
-                    <p class="p_general">Github</p>
-                    <p class="p_base" id="p_github"></p>
-                </div>
-                </div>
+            <div class='form__item final__social background__gray'>
+                <h1 class="final__titles">Social</h1>
+                <p class="p_general ">LinkedIn</p>
+                <p class="p_base" id="p_linkedln"></p>
+                <p class="p_general">Github</p>
+                <p class="p_base" id="p_github"></p>
+            </div>
+            </div>
 
-                <div class='form__item final__certificates background__gray'>
-                    <h1 class="final__titles">Certificates</h1>
-                    <div class="side">
-                        <p class="p_general p_general--mod">Team Name</p>
-                        <p class="p_base" id="p_team"></p>
-                    </div>
-                    <div class="side">
-                        <p class="p_general p_general--mod">Institution</p>
-                        <p class="p_base" id="p_inst"></p>
-                    </div>
-                    <div class="side">
-                        <p class="p_general p_general--mod">Graduation</p>
-                        <p class="p_base" id="p_grad"></p>
-                    </div>
-                    <div class="side">
-                        <p class="p_general p_general--mod">Cerficates</p>
-                        <p class="p_base" id="p_cert"></p>
-                    </div>
+            <div class='form__item final__certificates background__gray'>
+                <h1 class="final__titles">Certificates</h1>
+                <div class="side">
+                    <p class="p_general p_general--mod">Team Name</p>
+                    <p class="p_base" id="p_team"></p>
                 </div>
+                <div class="side">
+                    <p class="p_general p_general--mod">Institution</p>
+                    <p class="p_base" id="p_inst"></p>
+                </div>
+                <div class="side">
+                    <p class="p_general p_general--mod">Graduation</p>
+                    <p class="p_base" id="p_grad"></p>
+                </div>
+                <div class="side">
+                    <p class="p_general p_general--mod">Cerficates</p>
+                    <p class="p_base" id="p_cert"></p>
+                </div>
+            </div>
 
-                <div class="button_side"><button class='form__button form__create'>Novo formulário</button></div>
+            <div class="button_side"><button class='form__button form__create'>Novo formulário</button></div>
             </form>
         </section>
     </main>

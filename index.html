@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
 
@@ -14,7 +14,7 @@
     <main class="container">
         <header>
             <h1>Team Sing Up</h1>
-        </header>
+        </header> 
 
         <section class="display">
             <nav class='navigation'>
@@ -25,38 +25,197 @@
         </section>
 
         <section class="display">
+            <form class="form_content" id="form_content">
+
+                <div class="form__item">
+                    <label for="full__name">Full name*</label>
+                    <input type="text" id="full__name" onblur="save()" placeholder="Foo bar">
+                </div>
+                
+                <div class="form__item">
+                    <label for="basic__nickname">Nickname</label>
+                    <input type="text" id="basic__nickname" onblur="save()" placeholder="Juanito">
+                </div>
+
+                <div class="form__item">
+
+                    <div class="form__contact">
+
+                        <div class="form__email">
+                            <label for="basic__email ">Email*</label>
+                            <input type="email" id="basic__email" onblur="save()" placeholder="foo@bar.com">
+                        </div>
+
+                        <div class="form__phone">
+                            <label for="basic__phone">Phone</label>
+                            <input type="tel" id="basic__phone" onblur="save()" placeholder="(83) 00000-0000">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="section__birthday">Birthday*</p>
+
+                <div class="section__date">
+
+                    <div class="form__item" > 
+                        <label for="date__day">Day</label>
+                        <input type="number" id="date__day" onblur="save()" placeholder="01">
+                    </div>
+                
+                    <div class="form__item ">
+                        <label for="date__month">Month</label>
+                        <input type="number" id="date__month" onblur="save()" placeholder="01">
+                    </div>
+
+                    <div class="form__item ">
+                        <label for="date__year">Year</label>
+                        <input type="number" id="date__year" onblur="save()" placeholder="1991">
+                    </div>
+
+                    <div class="form__item ">
+                        <label for="date__age">Age</label>
+                        <input type="number" id="date__age" onblur="save()" placeholder ="18">
+                    </div>
+                </div>
+
+                <div class="form__item">
+                    <label for="terms"><input type="checkbox" name="privacy" id="section__terms"> I accept the terms and privacy</label>
+                </div>
+
+                <div class="form__item">
+                    <div class="button__next">
+                        <button class="form__button" type="submit">Next</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="display">
             <form class="form__content">
+
+                    <div class='form__item' id='social'>
+                        <label for="social-input">LinkedIn</label>
+                        <input class='social__input--linkedln' id="get__linkedln" onblur="save()" type="link" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"id='social-linkedln'>
+                    </div>
+
+                <div class='form__item'>
+                    <label for="team-name">Github *</label>
+                    <input class="social__input--github" id="social__input--github" onblur="save()" type="link" placeholder="https://github.com/foobar" id='social-github'>
+                </div>
+                <button class='form__button form__next' onclick="show()">Next <span class="form__icon--next"></span></button>
+            </form>
+        </section>
+
+        <section class="display">
+            <form class="form_content form_content--certificates">
 
                 <div class='form__certificates'>
                     <div class='form__item' id='certificates'>
-                        <label for="certificates-input">Certificates</label>
-                        <input class='certificates__input' type="text" id='certificates-input'>
+                        <label class="label__favorite" for="certificates-input">Certificates</label>
+                        <div class='favorite__input'>
+                            <input class='certificates__input' type="text" id="certi" placeholder="teste" onblur="save()">
+                            <span class="favorite__icon"></span>
+                        </div>
                     </div>
-                    <button class='form__button form__button--more'><i></i>More<i></i></button>
+                    <button class='form_button form_button--more'><i></i>More<i></i></button>
                 </div>
 
                 <div class='form__item'>
                     <label for="team-name">Team Name*</label>
-                    <input type="text" id='team-name'>
+                    <input type="text" id='team-name' onblur="save()">
                 </div>
 
                 <div class='form__item'>
                     <label for="institution">Institution*</label>
-                    <input type="text" id="institution">
+                    <input type="text" id="institution" onblur="save()">
                 </div>
 
                 <div class='form__item'>
                     <label for="graduation">Graduation*</label>
-                    <input type="text" id="graduation">
+                    <input type="text" id="graduation" onblur="save()">
                 </div>
 
-                <button class='form__button form__button--finish'>Finish</button>
+                <button class='form_button form_button--finish'>Finish</button>
 
             </form>
         </section>
-    </main>
 
-    <script src="./scripts/certificates.js"></script>
+        <section class="display">
+            <form class="form__content">
+
+                <div class="final__title">
+                    <h1>Registration Information</h1>
+                </div>
+                <div id="line"></div>
+
+                <div class='form__item final__basic background__gray'>
+                    <h1 class="final__titles">Basic</h1>
+                    <div class="engloba">
+                        <div class="final--larger">
+                            <div>
+                                <p class="p_general p_general--min">Full Name</p>
+                                <p class="p_base" id="p_name"></p>
+                            </div>
+                            <div>
+                                <p class="p_general p_general--min">Nickname</p>
+                                <p class="p_base" id="p_nickname"></p>
+                            </div>
+                            <div>
+                                <p class="p_general p_general--min">Email</p>
+                                <p class="p_base" id="p_email"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="p_general p_general--min">Phone</p>
+                                <p class="p_base" id="p_phone"></p>
+                            </div>
+                            <div>
+                                <p class="p_general p_general--min">Birthday</p>
+                                <p class="p_base" id="p_birthday"></p>
+                            </div>
+                            <div>
+                                <p class="p_general p_general--min">Age</p>
+                                <p class="p_base" id="p_age"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='form__item final__social background__gray'>
+                    <h1 class="final__titles">Social</h1>
+                        <p class="p_general ">LinkedIn</p>
+                        <p class="p_base" id="p_linkedln"></p>
+                        <p class="p_general">Github</p>
+                        <p class="p_base" id="p_github"></p>
+                    </div>
+                </div>
+
+                <div class='form__item final__certificates background__gray'>
+                    <h1 class="final__titles">Certificates</h1>
+                    <div class="side">
+                        <p class="p_general p_general--mod">Team Name</p><p class="p_base" id="p_team"></p>
+                    </div>
+                    <div class="side">
+                        <p class="p_general p_general--mod">Institution</p><p class="p_base"id="p_inst"></p>
+                    </div>
+                    <div class="side">
+                        <p class="p_general p_general--mod">Graduation</p><p class="p_base" id="p_grad"></p>
+                    </div>
+                    <div class="side">
+                        <p class="p_general p_general--mod">Cerficates</p><p class="p_base" id="p_cert"></p>
+                    </div>
+                </div>
+
+                <div class="button_side"><button class='form__button form__create'>Novo formulário</button></div>
+        </form>
+        </section> 
+    </main> 
+
+    <!-- <script src="./scripts/certificates.js"></script>  -->
+    
+    <script src="./scripts/social.js"></script>
+    <script src="./scripts/dados.js"></script>
 </body>
 
 </html>

@@ -17,10 +17,15 @@ function fisrtPageBlock() {
         btnNext[0].classList.add('form__button--active');
         activeFirstPageButton();
     } else {
+
         btnNext[0].classList.remove('form__button--active');
         desactiveFirstPageButton();
     }
 }
+
+btnNext[0].addEventListener('click', e => {
+    if((!btnNext[0].classList.contains('form__button--active'))) alert('Unfilled Fields!!!!')
+})
 
 function secondyPageBlock() {
     if (inputGithub.classList.contains('form__states--correct') && inputLinkedin.classList.contains('form__states--correct')) {
@@ -118,8 +123,11 @@ function thirdPage() {
 }
 
 function fourthPage() {
+    
+    saveFavoriteCertificates() 
 
-    alert("Data registered successfully")
+    alert("Data registered successfully");
+
     navigationHeader.classList.add('off');
 
     navigationItem.forEach((item, index) => {
@@ -133,6 +141,5 @@ function fourthPage() {
             item.classList.remove('off');
         } else item.classList.add('off');
     })
-
 }
 

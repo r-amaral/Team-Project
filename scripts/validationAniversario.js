@@ -1,4 +1,4 @@
-const spanBirtday = document.querySelectorAll('.form__efect--birthday')
+const spanBirtday = document.querySelectorAll('.form__efect--birthday');
 const inputDay = document.getElementById('date__day');
 const inputMonth = document.getElementById('date__month');
 const inputYear = document.getElementById('date__year');
@@ -49,7 +49,7 @@ function calculateAge(day, month, year) {
     let age = yearA - year;
 
     if (monthA < month || monthA == month && dayA < day) {
-        age = age - 1;
+        age--;
     }
 
     inputAge.value = age;

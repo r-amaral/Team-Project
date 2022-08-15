@@ -9,8 +9,13 @@ formItem.addEventListener('click', FavoriteCertificates);
 function FavoriteCertificates(event) {
 
     const heartElement = document.querySelectorAll('.favorite__icon');
+    const iconTrash = document.querySelectorAll('.trash__icon');
 
     for (let i = 0; i < heartElement.length; i++) {
+
+        if (event.target == iconTrash[i]) {
+            removeinput(iconTrash[i]);
+        }
 
         if (event.target == heartElement[i]) {
 
@@ -22,6 +27,7 @@ function FavoriteCertificates(event) {
             } else renderAddFavorite(divFavorite);
 
             if (arrayFavorito.indexOf(divFavorite) == -1) {
+                inputFavorite.classList.add('orderFav');
                 arrayFavorito.push(divFavorite);
                 divFavorite.remove();
             }
@@ -47,6 +53,10 @@ function renderAddFavorite(div) {
     div.classList.add('favorite__input--active');
 }
 
+function removeinput(element) {
+    element.parentNode.remove();
+}
+
 function moreCertificates(event) {
 
     event.preventDefault();
@@ -60,17 +70,23 @@ function moreCertificates(event) {
         document.querySelector('#certificates').appendChild(divElement);
 
         const inputElement = document.createElement('input');
+        inputElement.classList.add('cert')
+        inputElement.addEventListener('blur', save())
         inputElement.placeholder = 'https://www.linkedin.com/in/';
         inputElement.classList.add('certificates__input');
 
-        const spanElement = document.createElement('span');
-        spanElement.classList.add('favorite__icon');
+        const spanElementHeart = document.createElement('span');
+        spanElementHeart.classList.add('favorite__icon');
+
+        const spanElementTrash = document.createElement('span');
+        spanElementTrash.classList.add('trash__icon');
 
         const inputCollection = document.querySelectorAll('.favorite__input');
 
         let lastElement = [...inputCollection].pop();
 
         lastElement.appendChild(inputElement);
-        lastElement.appendChild(spanElement);
+        lastElement.appendChild(spanElementHeart);
+        lastElement.appendChild(spanElementTrash);
     }
 }

@@ -1,11 +1,10 @@
 function efectBirthdayDay(status) {
     if (status == 'correct') {
-        spanBirtday[0].innerHTML = 'Valid data!!'
-        correctEfect(spanBirtday[0])
+        spanBirtday[0].innerHTML = null;
         correctEfect(inputDay)
     }
     if (status == 'incorrect') {
-        spanBirtday[0].innerHTML = 'Invalid data!!'
+        spanBirtday[0].innerHTML = 'Invalid Day!!'
         incorrectEfect(inputDay);
         incorrectEfect(spanBirtday[0]);
     }
@@ -13,12 +12,11 @@ function efectBirthdayDay(status) {
 
 function efectBirthdayMonth(status) {
     if (status == 'correct') {
-        spanBirtday[1].innerHTML = 'Valid data!!'
-        correctEfect(spanBirtday[1])
+        spanBirtday[1].innerHTML = null;
         correctEfect(inputMonth)
     }
     if (status == 'incorrect') {
-        spanBirtday[1].innerHTML = 'Invalid data!!'
+        spanBirtday[1].innerHTML = 'Invalid Month!!'
         incorrectEfect(inputMonth);
         incorrectEfect(spanBirtday[1]);
     }
@@ -26,12 +24,11 @@ function efectBirthdayMonth(status) {
 
 function efectBirthdayYear(status) {
     if (status == 'correct') {
-        spanBirtday[2].innerHTML = 'Valid data!!'
-        correctEfect(spanBirtday[2])
+        spanBirtday[2].innerHTML = null;
         correctEfect(inputYear)
     }
     if (status == 'incorrect') {
-        spanBirtday[2].innerHTML = 'Invalid data!!'
+        spanBirtday[2].innerHTML = 'Invalid Year!!'
         incorrectEfect(inputYear);
         incorrectEfect(spanBirtday[2]);
     }
@@ -40,9 +37,8 @@ function efectBirthdayYear(status) {
 function efectForm(input, status, message) {
 
     if (input == 'Full Name' && status == 'correct') {
-        correctEfect(spanEfect[0]);
         correctEfect(inputForm[0]);
-        spanEfect[0].innerHTML = message;
+        spanEfect[0].innerHTML = null;
     }
 
     if (input == 'Full Name' && status == 'incorrect') {
@@ -53,8 +49,7 @@ function efectForm(input, status, message) {
 
     if (input == 'Email' && status == 'correct') {
         correctEfect(inputForm[2]);
-        correctEfect(spanEfect[2]);
-        spanEfect[2].innerHTML = message;
+        spanEfect[2].innerHTML = null;
     }
 
     if (input == 'Email' && status == 'incorrect') {

@@ -22,6 +22,24 @@
         }
     }
 
+    .side{
+        .certificates__storage{
+            align-items: center;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr auto;
+            align-items: start
+        }
+        
+        .blue__heart {
+            background: url(../../image/blueHeart.svg);
+            background-repeat: no-repeat;
+            background-size: 70%;
+            width: 23px;
+            height: 22px;
+        }
+    }
+
     .form__content {
         display: flex;
         flex-direction: column;
@@ -201,31 +219,42 @@
 
                 .certificates__input {
                     display: flex;
-                    padding-right: 40px;
+                    padding-right: 80px;
                 }
 
                 span {
-                    background-image: url('../../image/heart.svg');
-                    background-repeat: no-repeat;
                     width: 23px;
                     height: 22px;
                     position: absolute;
                     top: 12px;
-                    right: 13px;
                     cursor: pointer;
+                }
+
+                .favorite__icon {
+                    background-image: url(../../image/heart.svg);
+                    background-repeat: no-repeat;
+                    right: 13px;
+                }
+
+                .trash__icon {
+                    background-image: url(../../image/trash.svg);
+                    background-repeat: no-repeat;
+                    right: 50px;
                 }
             }
 
             .favorite__input--active {
                 order: 1;
 
-                span {
-                    background: url('../../image/blueHeart.svg');
+                .favorite__icon{
+                    background: url(../../image/blueHeart.svg);
                 }
             }
         }
     }
 }
+
+
 
 .form__contact {
     display: flex;
@@ -323,8 +352,6 @@
 
 .final__titles {
     color: $tertiary-color;
-
-
 }
 
 .background__gray {
@@ -339,7 +366,6 @@
     width: 133px;
     height: 37px;
     font-size: 0.8rem;
-
 }
 
 .final__social {
@@ -359,8 +385,9 @@
 
 .p_base {
     color: $label-color;
-    display: block;
-    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .engloba {
@@ -370,7 +397,7 @@
 
 .side {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
 }
 
 .button_side {

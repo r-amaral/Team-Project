@@ -10,6 +10,18 @@ function load() {
     validationBirthdayDay();
     validationBirthdayMonth();
     validationBirthdayYear();
+    formGitHub();
+    formLinkedin();
+    validationTeamName();
+    validationInstituition();
+    validationGraduation();
+    fisrtPageBlock()
+    secondyPageBlock();
+    thirdPageBlock();
+}
+
+function saveFavoriteCertificates(){
+ 
 }
 
 function save() {
@@ -30,7 +42,9 @@ function save() {
     localStorage.setItem('info_cert', JSON.stringify(certificates))
 }
 
-function saveFavoriteCertificates(){
+
+function show(){
+
     const certiList = document.querySelectorAll('.cert');
 
     const certiElement = document.getElementById('p_cert');
@@ -77,9 +91,6 @@ function saveFavoriteCertificates(){
             <div>${certificatesRegular[i]}</div> <span class="form__heart"></span>
         </div>`
     }
-}
-
-function show(){
 
     let fN = localStorage.getItem('info_fN');
     document.querySelector('#full__name').value = fN;

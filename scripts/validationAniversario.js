@@ -4,7 +4,13 @@ const inputMonth = document.getElementById('date__month');
 const inputYear = document.getElementById('date__year');
 
 function validationBirthdayDay() {
-    if (inputDay.value < 0 || inputDay.value > 31 || inputDay.value == '') {
+
+    if( inputDay.value == '') {
+        removeEfect(inputDay)
+        return
+    }
+
+    if (inputDay.value < 0 || inputDay.value > 31) {
         inputDay.value = '';
         efectBirthdayDay('incorrect')
     } else efectBirthdayDay('correct')
@@ -13,7 +19,13 @@ function validationBirthdayDay() {
 }
 
 function validationBirthdayMonth() {
-    if (inputMonth.value < 0 || inputMonth.value > 12 || inputMonth.value == '') {
+
+    if(inputMonth.value == ''){
+        removeEfect(inputMonth)
+        return
+    }  
+
+    if (inputMonth.value < 0 || inputMonth.value > 12) {
         inputMonth.value = '';
         efectBirthdayMonth('incorrect')
     } else efectBirthdayMonth('correct')
@@ -22,7 +34,13 @@ function validationBirthdayMonth() {
 }
 
 function validationBirthdayYear() {
-    if (inputYear.value < 0 || inputYear.value.length != 4 || inputYear.value == '') {
+
+    if(inputYear.value == '') {
+        removeEfect(inputYear)
+        return
+    }
+    
+    if (inputYear.value < 0 || inputYear.value.length != 4) {
         inputYear.value = '';
         efectBirthdayYear('incorrect')
     } else efectBirthdayYear('correct')

@@ -24,11 +24,10 @@
 
     .side{
         .certificates__storage{
-            align-items: center;
             display: grid;
             gap: 10px;
             grid-template-columns: 1fr auto;
-            align-items: start
+            align-items: start;
         }
         
         .blue__heart {
@@ -36,7 +35,7 @@
             background-repeat: no-repeat;
             background-size: 70%;
             width: 23px;
-            height: 22px;
+            height: 15px;
         }
     }
 
@@ -58,6 +57,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            cursor: pointer;
 
             .form__icon__right {
                 background: url(../../image/certoAzul.svg) no-repeat;
@@ -76,7 +76,6 @@
             color: $fourth-color ;
             background-color: $tertiary-color;
             border: none;
-            cursor: pointer;
             transition: .5s;
 
             .form__icon__right {
@@ -116,7 +115,6 @@
                 color: $fourth-color ;
                 background-color: $tertiary-color;
                 border: none;
-                cursor: pointer;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -188,14 +186,9 @@
                 padding-left: 12px;
             }
 
-            span.form__states--correct {
-                color: #198754;
-                font-size: 15px;
-            }
-
             span.form__states--incorrect {
+                font-size: 14px;
                 color: #dc3545;
-                font-size: 15px;
             }
 
             input.form__states--correct {
@@ -210,6 +203,7 @@
                 border: 2px solid #AAAAAA;
             }
 
+            
             .favorite__input {
                 position: relative;
                 display: flex;

@@ -76,7 +76,6 @@ header h1 {
   transition: 0.5s;
 }
 .display .side .certificates__storage {
-  align-items: center;
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr auto;
@@ -87,7 +86,7 @@ header h1 {
   background-repeat: no-repeat;
   background-size: 70%;
   width: 23px;
-  height: 22px;
+  height: 15px;
 }
 .display .form__content {
   display: flex;
@@ -107,6 +106,7 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 .display .form__content .form__button .form__icon__right {
   background: url(../../image/certoAzul.svg) no-repeat;
@@ -122,7 +122,6 @@ header h1 {
   color: #FFFFFF;
   background-color: #074EE8;
   border: none;
-  cursor: pointer;
   transition: 0.5s;
 }
 .display .form__content .form__button--active .form__icon__right {
@@ -157,7 +156,6 @@ header h1 {
   color: #FFFFFF;
   background-color: #074EE8;
   border: none;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -216,13 +214,9 @@ header h1 {
   height: 40px;
   padding-left: 12px;
 }
-.display .form__content .form__item span.form__states--correct {
-  color: #198754;
-  font-size: 15px;
-}
 .display .form__content .form__item span.form__states--incorrect {
+  font-size: 14px;
   color: #dc3545;
-  font-size: 15px;
 }
 .display .form__content .form__item input.form__states--correct {
   border: 1px solid #198754;

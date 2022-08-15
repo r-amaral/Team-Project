@@ -1,39 +1,50 @@
+const regexUrl = /(www|http:|https:|)+[^\s]+[\w]+[\com]/;
+
 const inputLinkedin = document.querySelector('.social__input--linkedln');
 const buttonNext = document.querySelector('.form__next');
-const regexLinkedin = /(www|http:|https:|)+[^\s]+[\w]+[\com]/;
-
 let inputGithub = document.querySelector('#social__input--github');
-const regexGithub = /(www|http:|https:|)+[^\s]+[\w]+[\com]/;
 const spanGithub = document.querySelector('.form__efect--github');
 const spanLinkedin = document.querySelector('.form__efect--linkedin');
 
 function formGitHub() {
 
-    if (regexGithub.test(inputGithub.value)) {
-        correctEfect(inputGithub)
-        spanGithub.innerHTML = null
+    if (inputGithub.value == '') {
+        incorrectEfect(inputGithub);
+        defaulEfect(inputGithub);
+        spanGithub.innerHTML = null;
+        return
+    }
+
+    if (regexUrl.test(inputGithub.value)) {
+        correctEfect(inputGithub);
+        spanGithub.innerHTML = null;
     } else {
-        incorrectEfect(inputGithub)
-        incorrectEfect(spanGithub)
-        spanGithub.innerHTML = 'Invalid Url!!'
+        incorrectEfect(inputGithub);
+        incorrectEfect(spanGithub);
+        spanGithub.innerHTML = 'Invalid Url!!';
     }
 }
 
 function formLinkedin() {
 
     if (inputLinkedin.value == '') {
+        correctEfect(inputLinkedin);
+        defaulEfect(inputLinkedin);
         spanLinkedin.innerHTML = null;
-        defaulEfect(inputLinkedin)
+        return;
+    }
 
-    } else if (regexLinkedin.test(inputLinkedin.value)) {
-        correctEfect(inputLinkedin)
-        spanLinkedin.innerHTML = null
+    if (regexUrl.test(inputLinkedin.value)) {
+        correctEfect(inputLinkedin);
+        defaulEfect(inputLinkedin);
+        spanLinkedin.innerHTML = null;
+    } else {
+        incorrectEfect(inputLinkedin);
+        incorrectEfect(spanLinkedin);
+        spanLinkedin.innerHTML = 'Invalid Url!!';
+        // removeEfect(inputLinkedin)
     }
-    else {
-        incorrectEfect(inputLinkedin)
-        incorrectEfect(spanLinkedin)
-        spanLinkedin.innerHTML = 'Invalid Url!!'
-    }
+
 }
 
 

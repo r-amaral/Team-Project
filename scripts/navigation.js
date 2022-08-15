@@ -25,7 +25,53 @@ function fisrtPageBlock() {
 
 btnNext[0].addEventListener('click', e => {
     if((!btnNext[0].classList.contains('form__button--active'))) alert('Unfilled Fields!!!!')
+    pendentFirstPageItem();
 })
+btnNext[1].addEventListener('click', e => {
+    if((!btnNext[1].classList.contains('form__button--active'))) alert('Unfilled Fields!!!!')
+    pendentSecondPageItem();
+})
+
+btnFinish.addEventListener('click', e => {
+    if((!btnFinish.classList.contains('form__button--active'))) alert('Unfilled Fields!!!!')
+    pendentThirdPageItem();
+})
+
+function pendentFirstPageItem(){
+    inputForm.forEach((item,index) =>{
+        if(index > 6) return;
+        if(!item.classList.contains('form__states--correct')){
+            removeEfect(item)
+            incorrectEfect(item)
+            incorrectEfect(spanEfect[index])
+            pendentSpan(index)
+        }
+    })
+}
+
+function pendentSecondPageItem(){
+    if(!inputGithub.classList.contains('form__states--correct')){
+        removeEfect(inputGithub)
+        incorrectEfect(inputGithub)
+        incorrectEfect(spanGithub)
+        pendentSpan(7)
+    }
+}
+
+function pendentThirdPageItem(){
+
+    const inputThirdPage = document.querySelectorAll('.form__input--third-page')
+
+    inputThirdPage.forEach((item,index) =>{
+       
+        if(!item.classList.contains('form__states--correct')){
+            removeEfect(item)
+            incorrectEfect(item)
+            incorrectEfect(spanEfect[index + 8])
+            pendentSpan(index + 8)
+        }
+    })
+}
 
 function secondyPageBlock() {
     if (inputGithub.classList.contains('form__states--correct') && inputLinkedin.classList.contains('form__states--correct')) {

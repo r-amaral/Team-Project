@@ -7,7 +7,10 @@ $('#basic__phone').mask("(99) 99999-9999")
 function validationNome() {
     let mascaraNome = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/
 
-    if(inputForm[0].value == '') return
+    if(inputForm[0].value == ''){
+        efectForm('Full Name', 'default');
+        return 
+    } 
 
     if (mascaraNome.test(inputForm[0].value)) {
         efectForm('Full Name', 'correct');
@@ -17,19 +20,18 @@ function validationNome() {
 }
 
 function validationNickName() {
-
     if (inputForm[1].value == '') {
         defaulEfect(inputForm[1])
-
-    } else {
-        correctEfect(inputForm[1])
-    }
+    } 
 }
 
 function validationEmail() {
     let mascaraEmail = /\S+@\S+\.\S+/;
 
-    if(inputForm[2].value == '') return
+    if(inputForm[2].value == ''){
+        efectForm('Email', 'default');
+        return 
+    } 
 
     if (mascaraEmail.test(inputForm[2].value)) {
         efectForm('Email', 'correct');
@@ -39,11 +41,8 @@ function validationEmail() {
 }
 
 function validationPhone() {
-    if (inputForm[3].value == '') {
+    if (inputForm[3].value == '') 
         defaulEfect(inputForm[3])
-    } else {
-        correctEfect(inputForm[3])
-    }
 }
 
 

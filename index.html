@@ -26,7 +26,7 @@
             </nav>
         </section>
 
-        <section class="display display--main ">
+        <section class="display display--main">
             <form class="form__content" id='form-basic'>
                 <div class="form__item">
                     <label for="full__name">Full name*</label>
@@ -68,23 +68,23 @@
                 <div class="section__date">
                     <div class="form__item form__item--aniversario">
                         <label for="date__day">Day</label>
-                        <input class='form__input--basic' type="number" id="date__day" placeholder="01"
+                        <input class='form__input--basic' type="number" id="date__day" placeholder="Day"
                             onchange="validationBirthdayDay(), fisrtPageBlock()">
-                        <span class='form__efect--birthday'></span>
+                        <span class='form__efect--birthday form__efect'></span>
                     </div>
 
                     <div class="form__item form__item--aniversario">
                         <label for="date__month">Month</label>
-                        <input class='form__input--basic' type="number" id="date__month" placeholder="01"
+                        <input class='form__input--basic' type="number" id="date__month" placeholder="Month"
                             onchange="validationBirthdayMonth(), fisrtPageBlock()">
-                        <span class='form__efect--birthday'></span>
+                        <span class='form__efect--birthday form__efect'></span>
                     </div>
 
                     <div class="form__item form__item--aniversario">
                         <label for="date__year">Year</label>
-                        <input class='form__input--basic' type="number" id="date__year" placeholder="1991"
+                        <input class='form__input--basic' type="number" id="date__year" placeholder="Year"
                             onchange="validationBirthdayYear(), fisrtPageBlock()">
-                        <span class='form__efect--birthday'></span>
+                        <span class='form__efect--birthday form__efect'></span>
                     </div>
 
                     <div class="form__item form__item--aniversario">
@@ -98,7 +98,8 @@
                             onchange="fisrtPageBlock()">
                         I
                         accept the terms and
-                        privacy</label>
+                        privacy
+                    </label>
                 </div>
                 <button class='form__button form__next'>Next<span class="form__icon--next"></span></button>
             </form>
@@ -110,16 +111,16 @@
                 <div class='form__item' id='social'>
                     <label for="social-input">LinkedIn</label>
                     <input class='social__input--linkedln form__states--correct form__states--default'
-                        id="get__linkedln" onblur="formLinkedin(),secondyPageBlock(),save()" type="url"
+                        id="get__linkedln" onblur="formLinkedin(),secondyPageBlock(),save()" type="text"
                         placeholder="https://www.linkedin.com/">
-                    <span class='form__efect--linkedin'></span>
+                    <span class='form__efect--linkedin form__efect--second-page'></span>
                 </div>
 
                 <div class='form__item'>
                     <label for="team-name">Github*</label>
                     <input id="social__input--github" onblur="save(), formLinkedin()"
-                        onchange="formGitHub(), secondyPageBlock()" type="link" placeholder="https://github.com">
-                    <span class='form__efect--github social__input--github'></span>
+                        onchange="formGitHub(), secondyPageBlock()" type="text" placeholder="https://github.com">
+                    <span class='form__efect--github social__input--github form__efect--second-page form__efect'></span>
                 </div>
                 <button class='form__button form__next' onclick="show()">Next <span
                         class="form__icon--next"></span></button>
@@ -133,11 +134,11 @@
                     <div class='form__item' id='certificates'>
                         <label class="label__favorite" for="certificates-input">Certificates</label>
                         <div class='favorite__input'>
-                            <input class='certificates__input cert' type="text" placeholder="https://www.linkedin.com/in/"
-                                onblur='save()'>
+                            <input class='certificates__input cert' type="text"
+                                placeholder="https://www.linkedin.com/in/" onblur='save()'>
                             <span class="trash__icon"></span>
                             <span class="favorite__icon"></span>
-                            
+
                         </div>
                     </div>
                     <button class='form__button form__button--more'><span class='form__icon__more'></span>More<span
@@ -146,23 +147,25 @@
 
                 <div class='form__item'>
                     <label for="team__name">Team Name*</label>
-                    <input type="text" id='team__name' placeholder="Team Front-End"
+                    <input type="text" id='team__name' class='form__input--third-page' placeholder="Team Front-End"
                         onchange="validationTeamName(), thirdPageBlock()" onblur="save()">
-                    <span class="form__efect--certificates"></span>
+                    <span class="form__efect--certificates form__efect"></span>
                 </div>
 
                 <div class='form__item'>
                     <label for="institution">Institution*</label>
-                    <input type="text" id="institution" placeholder="Universidade federal da Paraíba"
+                    <input type="text" id="institution" class='form__input--third-page'
+                        placeholder="Universidade federal da Paraíba"
                         onchange="validationInstituition(), thirdPageBlock()" onblur="save()">
-                    <span class=" form__efect--certificates"></span>
+                    <span class=" form__efect--certificates form__efect"></span>
                 </div>
 
                 <div class='form__item'>
                     <label for="graduation">Graduation*</label>
-                    <input type="text" id="graduation" placeholder="Ciência da Computação"
-                        onchange="validationGraduation(), thirdPageBlock()" onblur="save()">
-                    <span class=" form__efect--certificates"></span>
+                    <input type="text" id="graduation" class='form__input--third-page'
+                        placeholder="Ciência da Computação" onchange="validationGraduation(), thirdPageBlock()"
+                        onblur="save()">
+                    <span class=" form__efect--certificates form__efect"></span>
                 </div>
 
                 <button onclick="show()" class='form__button form__button--finish'><span
@@ -240,7 +243,8 @@
                 </div>
             </div>
 
-            <div class="button_side"><button type="submit" class='form__button form__create'onclick="clearpage()">New Form</button></div>
+            <div class="button_side"><button type="submit" class='form__button form__create' onclick="clearpage()">New
+                    Form</button></div>
             </form>
         </section>
     </main>

@@ -22,6 +22,8 @@ function FavoriteCertificates(event) {
             const divFavorite = event.target.parentNode;
             const inputFavorite = event.target.previousElementSibling;
 
+            if(inputFavorite.value == '') return
+
             if (divFavorite.classList.contains('favorite__input--active')) {
                 renderRemoveFavorite(divFavorite);
             } else renderAddFavorite(divFavorite);

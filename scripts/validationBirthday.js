@@ -5,22 +5,22 @@ const inputYear = document.getElementById('date__year');
 
 function validationBirthdayDay() {
 
-    if( inputDay.value == 0) {
+    if (inputDay.value == 0) {
         removeEfect(inputDay)
         return
     }
 
-    if (inputDay.value != 'Day')  efectBirthdayDay('correct')
-     
+    if (inputDay.value != 'Day') efectBirthdayDay('correct')
+
     validationBirthday();
 }
 
 function validationBirthdayMonth() {
 
-    if(inputMonth.value == ''){
+    if (inputMonth.value == '') {
         removeEfect(inputMonth)
         return
-    }  
+    }
 
     if (inputMonth.value != 'Month') efectBirthdayMonth('correct')
 
@@ -29,11 +29,11 @@ function validationBirthdayMonth() {
 
 function validationBirthdayYear() {
 
-    if(inputYear.value == '') {
+    if (inputYear.value == '') {
         removeEfect(inputYear)
         return
     }
-    
+
     if (inputYear.value != 'Year') efectBirthdayYear('correct')
 
     validationBirthday();
@@ -62,8 +62,4 @@ function calculateAge(day, month, year) {
     }
 
     inputAge.value = age;
-}
-
-function resetDate(){
-
 }

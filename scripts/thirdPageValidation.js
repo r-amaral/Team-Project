@@ -1,7 +1,7 @@
 const inputTeamName = document.getElementById('team__name');
 const inputInstitution = document.getElementById('institution');
 const inputGraduation = document.getElementById('graduation');
-const spanCertificates = document.querySelectorAll('.form__efect--certificates')
+const spanCertificates = document.querySelectorAll('.form__efect--certificates');
 
 const maskValidation = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/
 

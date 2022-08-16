@@ -68,24 +68,27 @@
                 <div class="section__date">
                     <div class="form__item form__item--aniversario">
                         <label for="date__day">Day</label>
-                        <select class='form__input--basic' value='Day' type="number" id="date__day"
-                            onchange="validationBirthdayDay(), fisrtPageBlock()" onblur="save()">
-                        <select>
+                        <select class='form__input--basic' value='Day' id="date__day"
+                            onchange="validationBirthdayDay(), fisrtPageBlock(), save()">
+                            <option value='Day' id='option__day' disabled selected>Day</option>
+                        </select>
                         <span class='form__efect--birthday form__efect'></span>
                     </div>
 
                     <div class="form__item form__item--aniversario">
                         <label for="date__month">Month</label>
-                        <select class='form__input--basic' type="number" id="date__month"
+                        <select class='form__input--basic' id="date__month"
                             onchange="validationBirthdayMonth(), fisrtPageBlock(),save()">
+                            <option value='' id='option__month' disabled selected>Month</option>
                         </select>
                         <span class='form__efect--birthday form__efect'></span>
                     </div>
 
                     <div class="form__item form__item--aniversario">
                         <label for="date__year">Year</label>
-                        <select class='form__input--basic' type="number" id="date__year"
+                        <select class='form__input--basic' id="date__year"
                             onchange="validationBirthdayYear(), fisrtPageBlock(),save()">
+                            <option value='' id='option__year' disabled selected>Year</option>
                         </select>
                         <span class='form__efect--birthday form__efect'></span>
                     </div>

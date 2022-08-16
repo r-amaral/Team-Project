@@ -2,10 +2,10 @@ const certificates = {};
 const certificatesFavoriteObj = {};
 
 function load() {
-    show();
     month();
     day();
-    year(); 
+    year();
+    show();
     validationNome();
     validationNickName();
     validationEmail();
@@ -18,7 +18,7 @@ function load() {
     validationTeamName();
     validationInstituition();
     validationGraduation();
-    fisrtPageBlock()
+    fisrtPageBlock();
     secondyPageBlock();
     thirdPageBlock();
 }
@@ -41,9 +41,7 @@ function save() {
     localStorage.setItem('info_cert', JSON.stringify(certificates))
 }
 
-
-
-function show(){
+function show() {
 
     let fN = localStorage.getItem('info_fN');
     document.querySelector('#full__name').value = fN;
@@ -64,10 +62,16 @@ function show(){
     let day = localStorage.getItem('info_birt_day');
     let month = localStorage.getItem('info_birt_month');
     let year = localStorage.getItem('info_birt_year');
-    
-    document.getElementById('date__day').value = day;
-    document.getElementById('date__month').value = month;
-    document.querySelector('#date__year').value = year;
+
+    if (!day == '')
+        document.getElementById('date__day').value = day;
+
+    if (!month == '')
+        document.getElementById('date__month').value = month;
+
+
+    if (!year == '')
+        document.querySelector('#date__year').value = year;
 
     document.getElementById('p_birthday').innerHTML = `${day} / ${month} / ${year}`;
 
@@ -78,7 +82,7 @@ function show(){
     let linkedln = localStorage.getItem('info_lin');
     document.querySelector('#get__linkedln').value = linkedln;
     document.getElementById('p_linkedln').innerHTML = linkedln;
-    
+
     let github = localStorage.getItem('info_git');
     document.querySelector('#social__input--github').value = github;
     document.getElementById('p_github').innerHTML = github;
@@ -112,7 +116,7 @@ function show(){
     }
 }
 
-function salveCertificates(){
+function salveCertificates() {
     const certiList = document.querySelectorAll('.cert');
     const certiElement = document.getElementById('p_cert');
 
@@ -132,7 +136,7 @@ function salveCertificates(){
             orderRegular++;
         }
     }
-    
+
     for (let i = 0; i < certiList.length; i++) {
 
         if (certiList[i].classList.contains('orderFav')) {
@@ -141,9 +145,9 @@ function salveCertificates(){
         }
     }
 
-    let tamanhoCert1 = Object.keys(certificatesRegular).length;    
+    let tamanhoCert1 = Object.keys(certificatesRegular).length;
     let tamanhoCert2 = Object.keys(certificatesFavorite).length;
-    
+
     for (let i = 0; i < tamanhoCert2; i++) {
         certiElement.innerHTML += `
         <div class='certificates__storage'>
@@ -158,3 +162,5 @@ function salveCertificates(){
         </div>`
     }
 }
+
+

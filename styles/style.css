@@ -211,7 +211,8 @@ header h1 {
 .display .form__content .form__item .label__favorite {
   order: -1;
 }
-.display .form__content .form__item input, .display .form__content .form__item select {
+.display .form__content .form__item input,
+.display .form__content .form__item select {
   background: #FFFFFF;
   border: 2px solid #AAAAAA;
   border-radius: 4px;
@@ -374,6 +375,7 @@ header h1 {
 
 .final__social {
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
 .p_general {

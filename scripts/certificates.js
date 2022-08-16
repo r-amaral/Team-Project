@@ -1,9 +1,9 @@
-const botaoMore = document.querySelector('.form__button--more');
+const btnMore = document.querySelector('.form__button--more');
 const formItem = document.querySelector('#certificates');
 
-let arrayFavorito = [];
+let favoriteElement = [];
 
-botaoMore.addEventListener('click', moreCertificates);
+btnMore.addEventListener('click', moreCertificates);
 formItem.addEventListener('click', FavoriteCertificates);
 
 function FavoriteCertificates(event) {
@@ -28,9 +28,9 @@ function FavoriteCertificates(event) {
                 renderRemoveFavorite(divFavorite);
             } else renderAddFavorite(divFavorite);
 
-            if (arrayFavorito.indexOf(divFavorite) == -1) {
+            if (favoriteElement.indexOf(divFavorite) == -1) {
                 inputFavorite.classList.add('orderFav');
-                arrayFavorito.push(divFavorite);
+                favoriteElement.push(divFavorite);
                 divFavorite.remove();
             }
             renderElement(inputFavorite.value);
@@ -40,7 +40,7 @@ function FavoriteCertificates(event) {
 
 function renderElement(value) {
 
-    let lastItem = [...arrayFavorito].pop();
+    let lastItem = [...favoriteElement].pop();
 
     lastItem.firstChild.value = value;
 

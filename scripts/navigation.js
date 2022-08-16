@@ -1,27 +1,13 @@
 const navigationItem = document.querySelectorAll('.navigation__item');
 const btnNext = document.querySelectorAll('.form__next');
 const btnFinish = document.querySelector('.form__button--finish');
-const telaDisplay = document.querySelectorAll('.display--main');
+const positionDisplay = document.querySelectorAll('.display--main');
 const form = document.querySelectorAll('.form__content');
 const navigationHeader = document.querySelector('.display--header');
 
 form.forEach(form => {
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-    })
+    form.addEventListener('submit', e => e.preventDefault())
 })
-
-function fisrtPageBlock() {
-
-    if (inputForm[0].classList.contains('form__states--correct') && inputForm[1].classList.contains('form__states--correct') && inputForm[2].classList.contains('form__states--correct') && inputDay.classList.contains('form__states--correct') && inputMonth.classList.contains('form__states--correct') && inputForm[3].classList.contains('form__states--correct') && inputYear.classList.contains('form__states--correct') && inputCheckBox.checked) {
-        btnNext[0].classList.add('form__button--active');
-        activeFirstPageButton();
-    } else {
-
-        btnNext[0].classList.remove('form__button--active');
-        desactiveFirstPageButton();
-    }
-}
 
 btnNext[0].addEventListener('click', e => {
     if((!btnNext[0].classList.contains('form__button--active'))) alert('Unfilled Fields!!!!')
@@ -36,6 +22,18 @@ btnFinish.addEventListener('click', e => {
     if((!btnFinish.classList.contains('form__button--active'))) alert('Unfilled Fields!!!!')
     pendentThirdPageItem();
 })
+
+function fisrtPageBlock() {
+
+    if (inputForm[0].classList.contains('form__states--correct') && inputForm[1].classList.contains('form__states--correct') && inputForm[2].classList.contains('form__states--correct') && inputDay.classList.contains('form__states--correct') && inputMonth.classList.contains('form__states--correct') && inputForm[3].classList.contains('form__states--correct') && inputYear.classList.contains('form__states--correct') && inputCheckBox.checked) {
+        btnNext[0].classList.add('form__button--active');
+        activeFirstPageButton();
+    } else {
+
+        btnNext[0].classList.remove('form__button--active');
+        desactiveFirstPageButton();
+    }
+}
 
 function pendentFirstPageItem(){
     inputForm.forEach((item,index) =>{
@@ -61,9 +59,7 @@ function pendentSecondPageItem(){
 function pendentThirdPageItem(){
 
     const inputThirdPage = document.querySelectorAll('.form__input--third-page')
-
     inputThirdPage.forEach((item,index) =>{
-       
         if(!item.classList.contains('form__states--correct')){
             removeEfect(item)
             incorrectEfect(item)
@@ -131,7 +127,7 @@ function fisrtPage() {
         } else item.classList.remove('navigation__item--active');
     })
 
-    telaDisplay.forEach((item, index) => {
+    positionDisplay.forEach((item, index) => {
         if (index == 0) {
             item.classList.remove('off');
         } else item.classList.add('off');
@@ -146,7 +142,7 @@ function secondyPage() {
         } else item.classList.remove('navigation__item--active');
     })
 
-    telaDisplay.forEach((item, index) => {
+    positionDisplay.forEach((item, index) => {
         if (index == 1) {
             item.classList.remove('off');
         } else item.classList.add('off');
@@ -161,7 +157,7 @@ function thirdPage() {
         } else item.classList.remove('navigation__item--active');
     })
 
-    telaDisplay.forEach((item, index) => {
+    positionDisplay.forEach((item, index) => {
         if (index == 2) {
             item.classList.remove('off');
         } else item.classList.add('off');
@@ -170,7 +166,8 @@ function thirdPage() {
 
 function fourthPage() {
     
-    saveFavoriteCertificates() 
+    // saveFavoriteCertificates() 
+    salveCertificates()
 
     alert("Data registered successfully");
 
@@ -182,7 +179,7 @@ function fourthPage() {
         } else item.classList.remove('navigation__item--active');
     })
 
-    telaDisplay.forEach((item, index) => {
+    positionDisplay.forEach((item, index) => {
         if (index == 3) {
             item.classList.remove('off');
         } else item.classList.add('off');

@@ -3,6 +3,9 @@ const certificatesFavoriteObj = {};
 
 function load() {
     show();
+    month();
+    day();
+    year(); 
     validationNome();
     validationNickName();
     validationEmail();
@@ -18,10 +21,6 @@ function load() {
     fisrtPageBlock()
     secondyPageBlock();
     thirdPageBlock();
-}
-
-function saveFavoriteCertificates(){
- 
 }
 
 function save() {
@@ -43,54 +42,8 @@ function save() {
 }
 
 
+
 function show(){
-
-    const certiList = document.querySelectorAll('.cert');
-
-    const certiElement = document.getElementById('p_cert');
-
-    let cert1 = localStorage.getItem('info_cert');
-    let cert2 = localStorage.getItem('info_cert_Favorite');
-
-    let orderFavorite = 0;
-    let orderRegular = 0;
-
-    let certificatesRegular = JSON.parse(cert1);
-    let certificatesFavorite = JSON.parse(cert2);
-
-    for (let i = 0; i < certiList.length; i++) {
-
-        if ((!certiList[i].value == '') && (!certiList[i].classList.contains('orderFav'))) {
-            certificatesRegular[orderRegular] = certiList[i].value;
-            orderRegular++;
-        }
-    }
-    
-    for (let i = 0; i < certiList.length; i++) {
-
-        if (certiList[i].classList.contains('orderFav')) {
-            certificatesFavorite[orderFavorite] = certiList[i].value;
-            orderFavorite++;
-        }
-    }
-
-    let tamanhoCert1 = Object.keys(certificatesRegular).length;
-    let tamanhoCert2 = Object.keys(certificatesFavorite).length;
-
-    for (let i = 0; i < tamanhoCert2; i++) {
-        console.log('teses')
-        certiElement.innerHTML += `
-        <div class='certificates__storage'>
-            <div>${certificatesFavorite[i]}</div> <span class="form__heart blue__heart"></span>
-        </div>`
-    }
-
-    for (let i = 0; i < tamanhoCert1; i++) {
-        certiElement.innerHTML += `
-        <div class='certificates__storage'>
-            <div>${certificatesRegular[i]}</div> <span class="form__heart"></span>
-        </div>`
-    }
 
     let fN = localStorage.getItem('info_fN');
     document.querySelector('#full__name').value = fN;
@@ -157,13 +110,51 @@ function show(){
     if (localStorage.info_lin === null || localStorage.info_lin === undefined || localStorage.info_lin === "") {
         document.getElementById('p_linkedln').innerHTML = '-';
     }
-
-    if (localStorage.info_cert === null || localStorage.info_cert === undefined || localStorage.info_cert === "") {
-        document.getElementById('p_cert').innerHTML = '-';
-    }
 }
 
-function clearpage(){
-    localStorage.clear();
-    window.location.reload();
+function salveCertificates(){
+    const certiList = document.querySelectorAll('.cert');
+    const certiElement = document.getElementById('p_cert');
+
+    let cert1 = localStorage.getItem('info_cert');
+    let cert2 = localStorage.getItem('info_cert_Favorite');
+
+    let orderFavorite = 0;
+    let orderRegular = 0;
+
+    let certificatesRegular = JSON.parse(cert1);
+    let certificatesFavorite = JSON.parse(cert2);
+
+    for (let i = 0; i < certiList.length; i++) {
+
+        if ((!certiList[i].value == '') && (!certiList[i].classList.contains('orderFav'))) {
+            certificatesRegular[orderRegular] = certiList[i].value;
+            orderRegular++;
+        }
+    }
+    
+    for (let i = 0; i < certiList.length; i++) {
+
+        if (certiList[i].classList.contains('orderFav')) {
+            certificatesFavorite[orderFavorite] = certiList[i].value;
+            orderFavorite++;
+        }
+    }
+
+    let tamanhoCert1 = Object.keys(certificatesRegular).length;    
+    let tamanhoCert2 = Object.keys(certificatesFavorite).length;
+    
+    for (let i = 0; i < tamanhoCert2; i++) {
+        certiElement.innerHTML += `
+        <div class='certificates__storage'>
+            <div>${certificatesFavorite[i]}</div> <span class="form__heart blue__heart"></span>
+        </div>`
+    }
+
+    for (let i = 0; i < tamanhoCert1; i++) {
+        certiElement.innerHTML += `
+        <div class='certificates__storage'>
+            <div>${certificatesRegular[i]}</div> <span class="form__heart"></span>
+        </div>`
+    }
 }

@@ -7,7 +7,12 @@ const maskValidation = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏ
 
 function validationTeamName() {
 
-    if(inputTeamName.value == '') return
+    if (inputTeamName.value == '') {
+        incorrectEfect(inputTeamName);
+        defaulEfect(inputTeamName);
+        spanCertificates[0].innerHTML = null;
+        return
+    }
 
     if (inputTeamName.value.length > 4) {
         correctEfect(inputTeamName)
@@ -23,7 +28,12 @@ function validationTeamName() {
 
 function validationInstituition() {
 
-    if(inputInstitution.value == '') return
+    if (inputInstitution.value == '') {
+        incorrectEfect(inputInstitution);
+        defaulEfect(inputInstitution);
+        spanCertificates[1].innerHTML = null;
+        return
+    }
 
     if (maskValidation.test(inputInstitution.value)) {
         correctEfect(inputInstitution)
@@ -37,8 +47,13 @@ function validationInstituition() {
 
 function validationGraduation() {
 
-    if(inputGraduation.value == '') return
-    
+    if (inputGraduation.value == '') {
+        incorrectEfect(inputGraduation);
+        defaulEfect(inputGraduation);
+        spanCertificates[2].innerHTML = null;
+        return
+    }
+
     if (maskValidation.test(inputGraduation.value)) {
         correctEfect(inputGraduation)
         spanCertificates[2].innerHTML = null

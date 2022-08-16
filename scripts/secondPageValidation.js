@@ -42,9 +42,7 @@ function formLinkedin() {
         incorrectEfect(inputLinkedin);
         incorrectEfect(spanLinkedin);
         spanLinkedin.innerHTML = 'Invalid Url!!';
-        // removeEfect(inputLinkedin)
     }
-
 }
 
 

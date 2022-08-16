@@ -68,22 +68,25 @@
                 <div class="section__date">
                     <div class="form__item form__item--aniversario">
                         <label for="date__day">Day</label>
-                        <input class='form__input--basic' type="number" id="date__day" placeholder="Day"
-                            onchange="validationBirthdayDay(), fisrtPageBlock()">
+                        <select class='form__input--basic' value='Day' type="number" id="date__day"
+                            onchange="validationBirthdayDay(), fisrtPageBlock()" onblur="save()">
+                        <select>
                         <span class='form__efect--birthday form__efect'></span>
                     </div>
 
                     <div class="form__item form__item--aniversario">
                         <label for="date__month">Month</label>
-                        <input class='form__input--basic' type="number" id="date__month" placeholder="Month"
-                            onchange="validationBirthdayMonth(), fisrtPageBlock()">
+                        <select class='form__input--basic' type="number" id="date__month"
+                            onchange="validationBirthdayMonth(), fisrtPageBlock(),save()">
+                        </select>
                         <span class='form__efect--birthday form__efect'></span>
                     </div>
 
                     <div class="form__item form__item--aniversario">
                         <label for="date__year">Year</label>
-                        <input class='form__input--basic' type="number" id="date__year" placeholder="Year"
-                            onchange="validationBirthdayYear(), fisrtPageBlock()">
+                        <select class='form__input--basic' type="number" id="date__year"
+                            onchange="validationBirthdayYear(), fisrtPageBlock(),save()">
+                        </select>
                         <span class='form__efect--birthday form__efect'></span>
                     </div>
 
@@ -243,7 +246,7 @@
                 </div>
             </div>
 
-            <div class="button_side"><button type="submit" class='form__button form__create' onclick="clearpage()">New
+            <div class="button_side"><button type="submit" class='form__button form__create'>New
                     Form</button></div>
             </form>
         </section>
@@ -252,14 +255,15 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="./scripts/certificates.js"></script>
-    <script src="./scripts/social.js"></script>
-    <script src="./scripts/dados.js"></script>
-    <script src='./scripts/validation.js'></script>
+    <script src="./scripts/secondPageValidation.js"></script>
+    <script src="./scripts/localStorageData.js"></script>
+    <script src='./scripts/firstPageValidation.js'></script>
     <script src="./scripts/navigation.js"></script>
-    <script src="./scripts/validationAniversario.js"></script>
+    <script src="./scripts/validationBirthday.js"></script>
     <script src="./scripts/efectValidation.js"></script>
     <script src="./scripts/newForm.js"></script>
     <script src="./scripts/thirdPageValidation.js"></script>
+    <script src="./scripts/datesSelect.js"></script>
 
 </body>
 
